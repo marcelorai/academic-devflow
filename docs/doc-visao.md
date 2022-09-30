@@ -22,6 +22,23 @@
 
 <p align="justify">Sistema para facilitar o acompanhamento do andamento de Projetos de Software dos discentes nas turmas Engenharia de Software do curso de Bacharelado em Sistemas de Informação do CERES/UFRN. </p>
 
+## Perfis dos Usuários
+
+O sistema poderá ser utilizado por diversos usuários. Temos os seguintes perfis/atores:
+
+- Perfil Administrador 
+
+Este usuário tem acesso a todas as entidades e funcionalidades do sistema, além de ter acesso à base de dados. Além de visualizar relatórios. 
+
+- Perfil Aluno
+
+Este usuário utiliza o sistema para realizar o gerenciamento do projeto ao qual ele faz parte, e também dos artefatos ligados ao projeto.
+
+- Perfil Professor 
+
+Este usuário utiliza o sistema para realizar o cadastro e gerenciamento dos projetos que coordena e também da equipe de projeto. Além disso, este usuário pode visualizar todos os artefatos produzidos ao longo do fluxo de desenvolvimento e gerar relatórios ao fim e cada iteração. 
+
+
 
 
 
