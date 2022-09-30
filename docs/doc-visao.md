@@ -11,11 +11,16 @@
 
 ## Matriz de Competências 
 
-| Equipe                       |
+| Equipe                       | Competências 
+| ---------------------------- | -----------
 | Adriel Faria dos Santos      |
 | Guilherme Angelo de Medeiros |
-| Joan de Azevedo Medeiros     | Full-Stack Developer - HTML, CSS, JavaScript, TypeScript, React.Js, Node.Js, Express.Js, Next.Js, MySQL, NoSQL, Scrum, XP, UX/UI Designer |
+| Joan de Azevedo Medeiros     | Desenvolvedor Full-Stack - JavaScript, TypeScript, React.Js, Node.Js, Express.Js, Next.Js, SQL, NoSQL, Scrum, XP, UX/UI Designer |
 | Marcelo Rai Araujo           |
+
+## Descrição do Projeto 
+
+<p align="justify">Sistema para facilitar o acompanhamento do andamento de Projetos de Software dos discentes nas turmas Engenharia de Software do curso de Bacharelado em Sistemas de Informação do CERES/UFRN. </p>
 
 
 
