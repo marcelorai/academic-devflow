@@ -9,6 +9,16 @@
 | Joan de Azevedo Medeiros     | Desenvolvedor, Testador e Gerente | joan.medeiros.130@ufrn.edu.br  |
 | Marcelo Rai Araujo           | Desenvolvedor, Testador           | marcelorai12@gmail.com         |
 
+## Matriz de Competências 
+
+| Equipe                       |
+| Adriel Faria dos Santos      |
+| Guilherme Angelo de Medeiros |
+| Joan de Azevedo Medeiros     | Full-Stack Developer - HTML, CSS, JavaScript, TypeScript, React.Js, Node.Js, Express.Js, Next.Js, MySQL, NoSQL, Scrum, XP, UX/UI Designer |
+| Marcelo Rai Araujo           |
+
+
+
 
 
 
