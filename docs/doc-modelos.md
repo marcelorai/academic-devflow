@@ -9,6 +9,10 @@ funcionamento geral.
 
 ### Histórico de revisões
 
+| Data       | Versão | Descrição         | Autor                   |
+| ---------- | ------ | ----------------- | ----------------------- |
+| 02/10/2022 | 1.0    | Documento inicial | Adriel Faria dos Santos |
+
 ## Modelo conceitual
 
 ### Descrição das entidades
