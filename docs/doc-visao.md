@@ -43,6 +43,10 @@ Este usuário utiliza o sistema para realizar o cadastro e gerenciamento dos pro
 - RNF01 - Deve ser acessível via navegador
 - RNF02 - Deve rodar em Windows e Linux
 - RNF03 - Deve ser feito o log de ações dos usuários
+- RNF04 - O sisteme deve possuir alta disponibilidade
+- RNF05 - O sitema deverá atender as normas legais
+- RNF05 - Os dados dos clientes devem ser de cunho privado
+- RNF06 - O Sistema deverá ser desenvolvido usando o Django 
 
 ## Riscos
 
