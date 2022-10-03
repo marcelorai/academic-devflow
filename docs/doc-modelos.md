@@ -19,6 +19,48 @@ funcionamento geral.
 
 ### Descrição das entidades
 
+#### **Usuário**
+
+Contém as informações necessárias para login e realização de ações no sistema
+
+#### **Membro**
+
+_Usuário_ que participa no desenvolvimento de _projetos_
+
+#### **Coordenador**
+
+_Usuário_ que coordena _membros_, _projetos_ e _equipes_
+
+#### **Equipe**
+
+Conjunto de _membros_ que participa de um _projeto_
+
+#### **Projeto**
+
+Representa um projeto que tem deu desenvolvimento acompanhado na plataforma
+
+#### **Fluxo**
+
+Representa o fluxo de desenvolvimento escolhido para um determinado _projeto_
+
+#### **Etapa**
+
+Representa uma etapa de um _fluxo_ de desenvolvimento
+
+#### **Atividade**
+
+Representa uma atividade realizada durante o desenvolvimento de um _projeto_
+
+#### _Artefato_
+
+Representa um item qualquer que tenha sido prduzido durante o desenvolvimento de
+um _projeto_
+
+#### **Penalidade**
+
+Representa um decréscimo de pontuação pelo atraso ou não entrega de um
+_artefato_
+
 ## Modelo de dados
 
 ![Modelo de dados do projeto](./images/modelo-dados.png)
