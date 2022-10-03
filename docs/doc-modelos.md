@@ -67,4 +67,19 @@ _artefato_
 
 ## Dicionário de dados
 
+| Entidade    | Atributo   | Limites e restrições                                             |
+| ----------- | ---------- | ---------------------------------------------------------------- |
+| ARTEFATO    | PONTUACAO  | Não pode assumir valores negativos                               |
+| ARTEFATO    | DESCRICAO  | Campo opicional                                                  |
+| ATIVIDADE   | DESCRICAO  | Campo opicional                                                  |
+| USUARIO     | TIPO       | Pode assumir valores **Administrador**, **Aluno**, **Professor** |
+| COORDENADOR | TELEFONE   | Deve possuir DDD                                                 |
+| ETAPA       | DESCRICAO  | Campo opicional                                                  |
+| ETAPA       | PONTUACAO  | Não pode assumir valores negativos                               |
+| FLUXO       | DESCRICAO  | Campo opicional                                                  |
+| MEMBRO      | TELEFONE   | Deve possuir DDD                                                 |
+| PENALIDADE  | COMENTARIO | Campo opicional                                                  |
+| PENALIDADE  | PONTOS     | Não pode assumir valores negativos                               |
+| PROJETO     | DESCRICAO  | Campo opicional                                                  |
+
 ## Referências
