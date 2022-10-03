@@ -83,3 +83,5 @@ _artefato_
 | PROJETO     | DESCRICAO  | Campo opicional                                                  |
 
 ## Referências
+
+[Documento padrão de Modelo Conceitual e Modelo de Dados usado no BSI](https://docs.google.com/document/d/1cxzXiWN149Nq5htoB88HZVE0GmWTnHemAwHrNYXif98/edit)
