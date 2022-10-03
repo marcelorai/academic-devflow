@@ -69,10 +69,9 @@ _artefato_
 
 | Entidade    | Atributo   | Limites e restrições                                             |
 | ----------- | ---------- | ---------------------------------------------------------------- |
-| ARTEFATO    | PONTUACAO  | Não pode assumir valores negativos                               |
 | ARTEFATO    | DESCRICAO  | Campo opicional                                                  |
+| ARTEFATO    | PONTUACAO  | Não pode assumir valores negativos                               |
 | ATIVIDADE   | DESCRICAO  | Campo opicional                                                  |
-| USUARIO     | TIPO       | Pode assumir valores **Administrador**, **Aluno**, **Professor** |
 | COORDENADOR | TELEFONE   | Deve possuir DDD                                                 |
 | ETAPA       | DESCRICAO  | Campo opicional                                                  |
 | ETAPA       | PONTUACAO  | Não pode assumir valores negativos                               |
@@ -81,6 +80,7 @@ _artefato_
 | PENALIDADE  | COMENTARIO | Campo opicional                                                  |
 | PENALIDADE  | PONTOS     | Não pode assumir valores negativos                               |
 | PROJETO     | DESCRICAO  | Campo opicional                                                  |
+| USUARIO     | TIPO       | Pode assumir valores **Administrador**, **Aluno**, **Professor** |
 
 ## Referências
 
