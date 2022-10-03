@@ -38,6 +38,14 @@ Este usuário utiliza o sistema para realizar o gerenciamento do projeto ao qual
 
 Este usuário utiliza o sistema para realizar o cadastro e gerenciamento dos projetos que coordena e também da equipe de projeto. Além disso, este usuário pode visualizar todos os artefatos produzidos ao longo do fluxo de desenvolvimento e gerar relatórios ao fim e cada iteração. 
 
+## Requisitos não funcionais
+
+- RNF01 - Deve ser acessível via navegador
+- RNF02 - Deve rodar em Windows e Linux
+- RNF03 - Deve ser feito o log de ações dos usuários
+
+
+
 
 
 
