@@ -51,7 +51,7 @@ Representa uma etapa de um _fluxo_ de desenvolvimento
 
 Representa uma atividade realizada durante o desenvolvimento de um _projeto_
 
-#### _Artefato_
+#### **Artefato**
 
 Representa um item qualquer que tenha sido prduzido durante o desenvolvimento de
 um _projeto_
