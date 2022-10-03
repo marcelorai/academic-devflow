@@ -44,8 +44,16 @@ Este usuário utiliza o sistema para realizar o cadastro e gerenciamento dos pro
 - RNF02 - Deve rodar em Windows e Linux
 - RNF03 - Deve ser feito o log de ações dos usuários
 
+## Riscos
 
-
+| Data       | Risco                                                                 | Prioridade | Responsável               | Status                  | Providência Solução                |
+|------------|-----------------------------------------------------------------------|------------|---------------------------|-------------------------|------------------------------------|
+| 03/09/2022 | Não aprendizado das ferramentas utilizadas pelos componentes do grupo | Alta       | Gerente                   | vigente                 |                                    |
+| 03/09/2022 | Ausência por qualquer motivo do cliente                               | Média      | Gerente                   | vigente                 |                                    |
+| 03/09/2022 | Divisão de tarefas mal sucedida                                       | Baixa      | Gerente                   | vigente                 |                                    |
+| 03/09/2022 | Implementação de protótipo com as tecnologias                         | Alta       | Todos                     | vigente                 |                                    |
+| 03/09/2022 | Ausência de um plano de testes                                        | Alta       | Todos                     | vigente                 |                                    |
+| 03/09/2022 | Falta de comunicação entre os envolvidos do projeto                   | Alta       | Todos                     | vigente                 |                                    |
 
 
 
