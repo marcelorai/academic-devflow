@@ -50,22 +50,13 @@ Este usuário utiliza o sistema para realizar o cadastro e gerenciamento dos pro
 
 ## Riscos
 
-| Data       | Risco                                                                 | Prioridade | Responsável               | Status                  | Providência Solução                |
-|------------|-----------------------------------------------------------------------|------------|---------------------------|-------------------------|------------------------------------|
-| 03/09/2022 | Não aprendizado das ferramentas utilizadas pelos componentes do grupo | Alta       | Gerente                   | vigente                 |                                    |
-| 03/09/2022 | Ausência por qualquer motivo do cliente                               | Média      | Gerente                   | vigente                 |                                    |
-| 03/09/2022 | Divisão de tarefas mal sucedida                                       | Baixa      | Gerente                   | vigente                 |                                    |
-| 03/09/2022 | Implementação de protótipo com as tecnologias                         | Alta       | Todos                     | vigente                 |                                    |
-| 03/09/2022 | Ausência de um plano de testes                                        | Alta       | Todos                     | vigente                 |                                    |
-| 03/09/2022 | Falta de comunicação entre os envolvidos do projeto                   | Alta       | Todos                     | vigente                 |                                    |
-| 03/09/2022 | Falta de comunicação entre os envolvidos do projeto                   | Alta       | Todos                     | vigente                 |                                    |
-
-
-
-
-
-
-
-
-
-
+| Data       | Risco                                                                 | Prioridade | Responsável               | Status                  | Providência Solução                                                                     |
+|------------|-----------------------------------------------------------------------|------------|---------------------------|-------------------------|-----------------------------------------------------------------------------------------|
+| 03/09/2022 | Não aprendizado das ferramentas utilizadas pelos componentes do grupo | Alta       | Gerente                   | vigente                 | Reforçar estudos sobre as ferramentas e aulas com a integrante que conhece a ferramenta |
+| 03/09/2022 | Ausência por qualquer motivo do cliente                               | Média      | Gerente                   | vigente                 | Planejar o cronograma tendo em base a agenda do cliente                                 |
+| 03/09/2022 | Divisão de tarefas mal sucedida                                       | Baixa      | Gerente                   | Resovido                | Acompanhar de perto o desenvolvimento de cada membro da equipe                          |
+| 03/09/2022 | Implementação de protótipo com as tecnologias                         | Alta       | Todos                     | vigente                 | Encontrar tutorial com a maioria da tecnologia e implementar um caso base do sistema    |
+| 03/09/2022 | Ausência de um plano de testes                                        | Alta       | Todos                     | vigente                 | Entrar em contato com o testador(es) responsáveis e solicitar o planejamento            |
+| 03/09/2022 | Falta de comunicação entre os envolvidos do projeto                   | Alta       | Todos                     | vigente                 | Os envolvidos devem comunicar-se através dos grupos e ferramentas definidas             |
+| 03/09/2022 | Tecnologias não definidas                                             | baixa      | Gerente                   | vigente                 | O gerente deve definir quais tecnologias e ferramentas serão utilizadas                 |
+| 03/09/2022 | Auseência de trabalho em equipe                                       | baixa      | Todos                     | vigente                 | A equipe deve ajudar-se independentimente do nível de experiência de cada desenvolvedor |
