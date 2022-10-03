@@ -17,6 +17,8 @@ funcionamento geral.
 
 ### Descrição das entidades
 
+![Modelo de dados do projeto](./images/modelo-conceitual.png)
+
 ## Modelo de dados
 
 ![Modelo de dados do projeto](./images/modelo-dados.png)
