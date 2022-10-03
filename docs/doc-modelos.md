@@ -19,6 +19,8 @@ funcionamento geral.
 
 ## Modelo de dados
 
+![Modelo de dados do projeto](./images/modelo-dados.png)
+
 ## Dicionário de dados
 
 ## Referências
