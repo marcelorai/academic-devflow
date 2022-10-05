@@ -9,9 +9,10 @@ funcionamento geral.
 
 ### Histórico de revisões
 
-| Data       | Versão | Descrição         | Autor                   |
-| ---------- | ------ | ----------------- | ----------------------- |
-| 02/10/2022 | 1.0    | Documento inicial | Adriel Faria dos Santos |
+| Data       | Versão | Descrição            | Autor                   |
+| ---------- | ------ | -------------------- | ----------------------- |
+| 02/10/2022 | 1.0    | Documento inicial    | Adriel Faria dos Santos |
+| 04/10/2022 | 1.1    | Correção dos modelos | Adriel Faria dos Santos |
 
 ## Modelo conceitual
 
@@ -19,13 +20,14 @@ funcionamento geral.
 
 ### Descrição das entidades
 
-#### **Usuário**
+#### **Artefato**
 
-Contém as informações necessárias para login e realização de ações no sistema
+Representa um item qualquer que tenha sido prduzido durante o desenvolvimento de
+um _projeto_
 
-#### **Membro**
+#### **Atividade**
 
-_Usuário_ que participa no desenvolvimento de _projetos_
+Representa uma atividade realizada durante o desenvolvimento de um _projeto_
 
 #### **Coordenador**
 
@@ -35,31 +37,41 @@ _Usuário_ que coordena _membros_, _projetos_ e _equipes_
 
 Conjunto de _membros_ que participa de um _projeto_
 
-#### **Projeto**
+#### **Etapa**
 
-Representa um projeto que tem deu desenvolvimento acompanhado na plataforma
+Representa uma etapa de um _fluxo_ de desenvolvimento. Seu atributo "NUMERO"
+é o responsável por ditar a sua posição no fluxo, ou seja, as etapas de um fluxo
+são ordenadas com base nesse atributo, de forma que etapas com o mesmo número
+ocorrem simultaneamente
 
 #### **Fluxo**
 
 Representa o fluxo de desenvolvimento escolhido para um determinado _projeto_
 
-#### **Etapa**
+#### **Iteração**
 
-Representa uma etapa de um _fluxo_ de desenvolvimento
+Representa uma iteração do processo de desenvolvimento de um _projeto_
 
-#### **Atividade**
+#### **Membro**
 
-Representa uma atividade realizada durante o desenvolvimento de um _projeto_
+_Usuário_ que participa no desenvolvimento de _projetos_
 
-#### **Artefato**
+#### **Pontuacao**
 
-Representa um item qualquer que tenha sido prduzido durante o desenvolvimento de
-um _projeto_
+Representa um acrescimo ou decréscimo de pontuação pela entrega, não entrega ou
+atraso de uma _atividade_ ou _artefato_
 
-#### **Penalidade**
+#### **Projeto**
 
-Representa um decréscimo de pontuação pelo atraso ou não entrega de um
-_artefato_
+Representa um projeto que tem deu desenvolvimento acompanhado na plataforma
+
+#### **Release**
+
+Representação de uma release do processo de desenvolvimento de um _projeto_
+
+#### **Usuário**
+
+Contém as informações necessárias para login e realização de ações no sistema
 
 ## Modelo de dados
 
@@ -69,19 +81,23 @@ _artefato_
 
 | Entidade    | Atributo   | Limites e restrições                                             |
 | ----------- | ---------- | ---------------------------------------------------------------- |
-| ARTEFATO    | DESCRICAO  | Campo opicional                                                  |
-| ARTEFATO    | PONTUACAO  | Não pode assumir valores negativos                               |
-| ATIVIDADE   | DESCRICAO  | Campo opicional                                                  |
-| COORDENADOR | TELEFONE   | Deve possuir DDD                                                 |
-| ETAPA       | DESCRICAO  | Campo opicional                                                  |
-| ETAPA       | PONTUACAO  | Não pode assumir valores negativos                               |
-| FLUXO       | DESCRICAO  | Campo opicional                                                  |
-| MEMBRO      | TELEFONE   | Deve possuir DDD                                                 |
-| PENALIDADE  | COMENTARIO | Campo opicional                                                  |
-| PENALIDADE  | PONTOS     | Não pode assumir valores negativos                               |
-| PROJETO     | DESCRICAO  | Campo opicional                                                  |
+| ARTEFATO    | DESCRICAO  | Campo opcional                                                   |
+| ATIVIDADE   | DESCRICAO  | Campo opcional                                                   |
+| COORDENADOR | TELEFONE   | Deve considerar DDD                                              |
+| ETAPA       | ATIVA      | TPor padrão é False                                              |
+| ETAPA       | DESCRICAO  | Campo opcional                                                   |
+| ETAPA       | GAMEFICADA | Por padrão é True                                                |
+| ETAPA       | NUMERO     | Não pode assumir valores negativos                               |
+| FLUXO       | DESCRICAO  | Campo opcional                                                   |
+| ITERACAO    | DESCRICAO  | Campo opcional                                                   |
+| MEMBRO      | TELEFONE   | Deve considerar DDD                                              |
+| PONTUACAO   | COMENTARIO | Campo opcional                                                   |
+| PONTUACAO   | PONTOS     | Não pode assumir valores negativos                               |
+| PONTUACAO   | PENALIDADE | Por padrão é False                                               |
+| PROJETO     | DESCRICAO  | Campo opcional                                                   |
+| RELEASE     | DESCRICAO  | Campo opcional                                                   |
 | USUARIO     | TIPO       | Pode assumir valores **Administrador**, **Aluno**, **Professor** |
 
 ## Referências
 
-[Documento padrão de Modelo Conceitual e Modelo de Dados usado no BSI](https://docs.google.com/document/d/1cxzXiWN149Nq5htoB88HZVE0GmWTnHemAwHrNYXif98/edit)
+[Modelo BSI - Doc 002 - Modelo Conceitual e Modelo de Dados](https://docs.google.com/document/d/1cxzXiWN149Nq5htoB88HZVE0GmWTnHemAwHrNYXif98/edit)
