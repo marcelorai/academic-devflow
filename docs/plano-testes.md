@@ -46,7 +46,6 @@ A lista a seguir identifica os itens que foram identificados como alvos do teste
 
 - Verificar função de conexão com o banco de dados;
 - Verificar as funções de query que se comunicam com o banco de dados;
-- Verificar o status da aplicação criada; 
 - Verificar as funções que se comunicam com a API;
 - Verificar as funções de validação dos campos informados e passados por parâmetros;
 - Verificar as funções da camada do controlador;
@@ -160,9 +159,40 @@ O teste da Interface com o Usuário verifica a interação de um usuário com o 
 - Técnica: Criar / modificar testes para cada janela a fim de verificar a navegação adequada e os estados de objeto para cada janela e objeto do aplicativo.
 - Critérios de Conclusão: Verificação com êxito de cada janela permanecer consistente com a versão de benchmark ou dentro do padrão aceitável.
 
+#### 3.2 Ferramentas 
+
+<p align="justify">
+  As ferramentas que serão utilizadas para o desenvolvimento dos testes ainda não foram definidas.
+</p>
+
 ### 4 Equipe e infra-estrutura 
+
+<p align="justify">
+  Esta seção apresenta a equipe desenvolvedora e responsável pelo desenvolvimento dos testes do sistema academic-devflow, suas principais responsabilidades e seu conhecimento ou configuração de habilidades. 
+</p>
+
+| Função | Responsáveis | Responsabilidades Específicas/Comentários 
+| ------ | ------------ | -----------------------------------------
+| Gerente de Testes | Taciano Silva | Fornecer supervisão de gerenciamento com as responsabilidades de: fornecer direção técnica e adquirir recursos apropriados |
+| Designer de Teste | Adriel, Joan, Guilherme e Marcelo | Identifica, prioriza e implementa casos de teste com as responsabilidades de: gerar plano de teste, gerar conjunto de teste e avaliar eficácia do esforço de teste |
+| Testador do sistema | Adriel, Joan, Guilherme e Marcelo | Executa os testes com as responsabilidades de: executar testes, registrar resultados, recuperar-se de erros e documentar defeitos |
+| Implementador	| Adriel, Joan, Guilherme e Marcelo | Implementa e faz o teste de unidade das classes de teste e pacotes de teste | 
 
 ### 5 Cronograma de atividades
 
-### 6 Documentação complementar 
+| Milestone | Tarefas | Data de início | Data de Encerramento 
+| --------- | ------- | -------------- | --------------------
+| Plano de testes | Elaborar o documento de visão; <br/> Elaborar o documento de modelos; <br/> Criar o plano de Release e Iteração; <br/> Criação da Lista de User Stories; <br/> Criação do plano de testes; | 29/09/2022 | 06/10/2022 |
+| à definir | --- | --- | --- |
+| à definir | --- | --- | --- |
+| à definir | --- | --- | --- |
+| à definir | --- | --- | --- |
 
+### Documentação complementar 
+
+| Documento | Descrição 
+| --------- | ---------
+| Documento de visão | Documento que aborda a equipe responsável pelo projeto, a matriz de competência da equipe, os perfis de usuário do sistema, os requisitos funcionais e não funcionais, e a tabela de riscos ao projeto. |
+| Documento de modelos | Documento que contém a representação do sistema na forma de um modelo conceitual e de dados, além de conter os detalhes de cada entidade do modelo. |
+| Plano de release e iteração | Documento que contém o planejamento das iterações com suas respectivas atividades e artefatos, e também o planejamento das releases com seus respectivos detalhes. |
+| Lista de Users Stories | Documento que aborda as especificações que descrevem as funcionalidades do sistema. |
