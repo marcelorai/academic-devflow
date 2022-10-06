@@ -64,12 +64,14 @@ Requisito | Título | Descrição | Ator
 
 ## Requisitos não funcionais
 
-- RNF01 - Deve ser acessível via navegador
-- RNF02 - Deve rodar em Windows e Linux
-- RNF03 - Deve ser feito o log de ações dos usuários
-- RNF04 - O sisteme deve possuir alta disponibilidade
-- RNF05 - O sitema deverá atender as normas legais
-- RNF05 - Os dados dos clientes devem ser de cunho privado
+| Requisito | Descrição |
+| --------- | --------- |
+| RNF01   | Deve ser acessível via navegador
+| RNF02   | Deve rodar em Windows e Linux
+| RNF03   | Deve ser feito o log de ações dos usuários
+| RNF04   | O sisteme deve possuir alta disponibilidade
+| RNF05   | O sitema deverá atender as normas legais
+| RNF05   | Os dados dos clientes devem ser de cunho privado
 
 
 ## Riscos
