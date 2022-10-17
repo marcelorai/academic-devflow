@@ -13,10 +13,10 @@
 
 | Equipe                       | Competências 
 | ---------------------------- | -----------
-| Adriel Faria dos Santos      |
-| Guilherme Angelo de Medeiros |
-| Joan de Azevedo Medeiros     | Desenvolvedor Full-Stack - JavaScript, TypeScript, React.Js, Node.Js, Express.Js, Next.Js, SQL, NoSQL, Scrum, XP, UX/UI Designer |
-| Marcelo Rai Araujo           |
+| Adriel Faria dos Santos      | à definir
+| Guilherme Angelo de Medeiros | à definir
+| Joan de Azevedo Medeiros     | à definir
+| Marcelo Rai Araujo           | à definir
 
 ## Descrição do Projeto 
 
@@ -42,7 +42,7 @@ Este usuário utiliza o sistema para realizar o cadastro e gerenciamento dos pro
 
 Requisito | Título | Descrição | Ator
 --------- | ------ | --------- | ----
-| RF01 | Acessar sistema | O sistema deve possuir um módulo de autenticação e autorização para seu uso. Usuários que já possuem contas, devem informar suas credencias (usuário e senha) para acessar o sistema. Para os usuários que ainda não possuem conta, devem preencher um formulário de cadastro, contendo os campos: nome, data de nascimento, cpf, e-mail e telefone. Após o preenchimento do formulário, o usuário deve aceitar os termos de uso e política de privacidade. | Professor. |
+| RF01 | Acessar sistema | O sistema deve possuir um módulo de autenticação e autorização para seu uso. Usuários que já possuem contas, devem informar suas credencias (usuário e senha) para acessar o sistema. Para os usuários que ainda não possuem conta, devem preencher um formulário de cadastro, contendo os campos: nome, e-mail e telefone. Após o preenchimento do formulário, o usuário deve aceitar os termos de uso e política de privacidade. | Professor. |
 | RF02 | Manter Projeto | Um projeto tem código, nome, descrição, situação, data de início, data prevista de término, coordenador, equipe, fluxo de desenvolvimento. O sistema deve permitir o cadastro de um novo projeto, assim como a alteração e visualização deste. Observação: Para se criar um projeto, o usuário deve possuir uma conta. | Professor. |
 | RF03 | Manter Fluxo de desenvolvimento | Um fluxo de desenvolvimento tem código, nome, descrição, quantidade de etapas. O sistema deve permitir o cadastro de um novo fluxo de desenvolvimento para cada projeto, assim como a alteração e visualização deste. | Professor. |
 | RF04 | Manter Etapa | Uma etapa tem código, nome, descrição, data de início, data de finalização, pontuação. No momento de cadastro do fluxo de desenvolvimento, o sistema deve permitir o cadastro das etapas do processo de desenvolvimento, assim como a alteração, visualização e exclusão destas etapas. | Professor. |
@@ -66,12 +66,12 @@ Requisito | Título | Descrição | Ator
 
 | Requisito | Descrição |
 | --------- | --------- |
-| RNF01   | Deve ser acessível via navegador
-| RNF02   | Deve rodar em Windows e Linux
-| RNF03   | Deve ser feito o log de ações dos usuários
-| RNF04   | O sisteme deve possuir alta disponibilidade
-| RNF05   | O sitema deverá atender as normas legais
-| RNF05   | Os dados dos clientes devem ser de cunho privado
+| RNF01     | O sistema deve ser acessível via navegador
+| RNF02     | O sistema deve rodar em Windows e Linux
+| RNF03     | O sistema deve ser feito o log de ações dos usuários
+| RNF04     | O sistema deve possuir alta disponibilidade
+| RNF05     | O sistema deverá atender as normas legais
+| RNF05     | Os dados dos clientes devem ser de cunho privado
 
 
 ## Riscos
