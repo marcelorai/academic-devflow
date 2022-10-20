@@ -4,8 +4,8 @@ from projects.models import Projeto
 
 class ProjetoModel(TestCase):
     DESCRICAO = 'Teste do modelo projeto'
-    DT_INICIO = '10/10/2010'
-    DT_TERMINO = '11/11/2011'
+    DT_INICIO = '2010-10-10'
+    DT_TERMINO = '2011-11-11'
     NOME = 'Teste'
     SITUACAO = 'Em desenvolvimento'
 
