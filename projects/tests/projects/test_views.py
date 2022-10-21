@@ -10,17 +10,9 @@ class ProjetoUpdateView(TestCase):
     NOME = 'Teste'
     SITUACAO = 'Em desenvolvimento'
 
-    PROJETO_OBJ = Projeto.objects.create(descricao=DESCRICAO, dt_inicio=DT_INICIO,
-                                         dt_termino=DT_TERMINO, nome=NOME, situacao=SITUACAO)
-
-    def test_edicao_do_projeto_solicitado(self):
-        """Testa se o objeto retornado para edição é o solicitado"""
-
-        url = reverse_lazy('projects:update', args=[self.PROJETO_OBJ.id])
-        response = self.client.get(url)
-        projeto_recebido = response.context['projeto']
-
-        self.assertEqual(projeto_recebido.id, self.PROJETO_OBJ.id)
+    def setUp(self):
+        self.PROJETO_OBJ = Projeto.objects.create(descricao=self.DESCRICAO, dt_inicio=self.DT_INICIO,
+                                                  dt_termino=self.DT_TERMINO, nome=self.NOME, situacao=self.SITUACAO)
 
     def test_nome_do_projeto_editavel(self):
         """Testa se o campo 'nome' de um objeto Projeto é editável"""
