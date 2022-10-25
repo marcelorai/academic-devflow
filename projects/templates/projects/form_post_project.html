@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="form-post-project">
+    <h3>Adicionar Novo Projeto</h3>
+    <form action="" method="post">
+        <label for="name-project">
+            <input type="text" name="name-project" id="name-project">
+        </label>
+        <label for="description-project">
+            <textarea name="description-project" id="description-project" cols="30" rows="10"></textarea>
+        </label>
+        <label for="date-start">
+            <input type="date" name="date-start" id="date-start">
+        </label>
+        <label for="date-end">
+            <input type="date" name="date-end" id="date-end">
+        </label>
+        <label for="situation">
+            <select name="situation" id="situation">
+                <option value="1">Pendente</option>
+                <option value="2">Em andamento</option>
+                <option value="3">Interrompido</option>
+                <option value="4">Finalizado</option>
+            </select>
+        </label>
+    </form>
+</div>
+{% endblock %}
