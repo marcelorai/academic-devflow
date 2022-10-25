@@ -11,9 +11,8 @@ def newProject(request):
         form = ProjectForm(request.POST)
 
         if form.is_valid():
-            project = form
-            project.save()
-            return redirect('/projects/')
+            form.save()
+            return redirect('/projects')
         
     else :
         form = ProjectForm()

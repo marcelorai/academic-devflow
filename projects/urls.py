@@ -6,5 +6,5 @@ app_name = 'projects'
 
 urlpatterns = [
     path('', homeProject),
-    path('register/', newProject)
+    path('register/', newProject, name='register')
 ]

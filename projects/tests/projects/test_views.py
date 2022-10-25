@@ -1,14 +1,13 @@
-from urllib import response
 from django.test import TestCase, Client
 from projects.models import Projeto
 
 from django.urls import reverse 
 
-class TestViewPostProject(TestCase):
+class TestViewNewProject(TestCase):
 
     def setUp(self):
         self.client = Client()
-        self.register_url = reverse('register')
+        self.register_url = reverse('projects:register')
         self.ProjectTest = Projeto.objects.create(
             descricao = 'Descrição teste',
             dt_inicio = '2010-10-10',
@@ -17,12 +16,16 @@ class TestViewPostProject(TestCase):
             situacao = 'Em desenvolvimento'
         )
 
-    def test_view_post_project(self):
-
-        response = self.client.post(self.register_url, {
-            self.ProjectTest
-        })
-
-        self.assertEquals(response.status_code, 200)
-        self.assertEquals(self.ProjectTest.nome, 'Nome Teste')
+    def test_view_new_project(self):
+        url = self.register_url
+        data = {
+            "descricao": self.ProjectTest.descricao,
+            "dt_inicio": self.ProjectTest.dt_inicio,
+            "dt_termino": self.ProjectTest.dt_termino,
+            "nome": self.ProjectTest.nome,
+            "situacao": self.ProjectTest.situacao
+        }
+        response = self.client.post(url, data)
+        self.assertEquals(response.status_code, 302)
+        self.assertEquals(self.ProjectTest.nome, 'Nome teste')
 
