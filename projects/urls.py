@@ -1,9 +1,10 @@
 from django.urls import path
 
-from projects.views import postProject
+from projects.views import newProject, homeProject
 
 app_name = 'projects'
 
 urlpatterns = [
-    path('register/', postProject)
+    path('', homeProject),
+    path('register/', newProject)
 ]
