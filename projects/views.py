@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .forms import ProjectForm
 
 def homeProject(request):
-    return render(request, 'projects/home.html')
+    return render(request, 'home.html')
 
 def newProject(request):
     
