@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+
 from .forms import ProjectForm
 
 def homeProject(request):
@@ -16,6 +16,6 @@ def newProject(request):
         
     else :
         form = ProjectForm()
-        return render(request, 'projects/newProject.html', {'form': form})
+        return render(request, 'newProject.html', {'form': form})
 
            
