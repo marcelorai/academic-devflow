@@ -4,11 +4,28 @@
 
 {% block content %}
 
-<div class="div-form-new-project">
-    <form action="" method="post">
-        <input type="input" class="form__field" placeholder="Nome do projeto" name="name-project" id='name-project' required />
-        <label for="name" class="form__label">Nome do projeto</label>
-    </form>
-</div>
+<form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Salvar</button>
+</form>
+
 
 {% endblock %}
+
+<!-- <div class="div-form-new-project">
+    <h1>Adicione um novo Projeto</h1>
+    <form action="" method="post" class="form-new-project">
+        <label for="name-project" class="">Nome do projeto</label>
+        <input type="input" class="" placeholder="Nome do projeto" name="name-project" id='name-project' required />
+        <label for="description-project" class="">Descrição do projeto</label>
+        <textarea 
+            class="" 
+            placeholder="Descrição do projeto" 
+            name="description-project" 
+            id="description-project cols="30" rows="10">
+        </textarea>
+        <label for="date-start">Data de Início</label>
+        <input type="date" name="date-start" id="date-start">
+        <label for="date-end">Data de Término</label>
+        <input type="date" name="date-end" id="date-end">
+</div> -->
