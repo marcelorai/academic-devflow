@@ -32,6 +32,30 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **TA01.06** | No seu perfil, os campos que estão sendo alterados deverão ser atualizados corretamente, ao clicar em Salvar ele é notificado com uma mensagem de sucesso. Mensagem: Alteração realizada com sucesso. |
 | **TA01.07** | O usuário informa, durante a alteração do perfil, os dados para registrar-se incorretamente, ao clicar em Salvar ele é notificado com uma mensagem de erro. Mensagem: Atualização não realizada, o campo “xxxx” não foi informado. |
 
+## User Story US03 - Acessar Sistema
+
+|                              |                                                                                                                                                                                                                       |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Descrição**                | Quando o usuário estiver adicionado suas credenciais, o sistema deverá permitir a liberação dos módulos de acesso, de acordo com a prioridade do usuário, isso irá liberar o acesso as funcionalidades dos componentes já implementados. |                                                                         
+| **Requisitos envolvidos**    | RF03, RF04, RF09, RF10                                                                                                                                                                                                |
+| **Estimativa**               | 10 Horas                                                                                                                                                                                                              | 
+| **Tempo Gasto (real):**      | ---                                                                                                                                                                                                                  |
+| **Prioridades**              | Essencial                                                                                                                                                                                                            |
+| **Tamanho Funcional**        | ---                                                                                                                                                                                                                  |
+| **Analista**                 | Marcelo                                                                                                                                                                                                              |
+| **Desenvolvedor**            | Não Definido                                                                                                                                                                                                          |
+| **Revisor**                  | Não Definido                                                                                                                                                                                                          |
+| **Testador**                 | Não Definido                                                                                                                                                                                                          |
+
+## Teste de Aceitação
+
+| **Código**  | **Descrição** |
+|-------------|---------------|
+| **TA03.01** | O usuário informa, na tela Login, os dados para logar corretamente, ao clicar em Entrar ele é encaminhado para a tela principal do sistema. É exibida a Mensagem: Login realizado com sucesso. |
+| **TA03.02** | O usuário informa, na tela Login, os dados para logar incorretamente, ao clicar em Entrar ele é notificado com uma mensagem de erro. É exibida a Mensagem: Usuário não ativado, aguardando ativação do administrador. |
+| **TA03.03** | No seu perfil, o usuário deverá ser capaz de visualizar todas as informações ao qual ele tem acesso. |
+| **TA03.04** | No seu perfil, o usuário poderá listar informações desejadas e exportar os dados para um arquivo em formato de planilha, ao clicar em Exportar ele é notificado com uma mensagem de sucesso. É exibida a Mensagem: Lista "xxxx" exportada com sucesso. |
+
 ## User Story US02 - Manter projeto
 
 |     |     |
@@ -47,7 +71,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor** | - |
 | **Testador** | - |
 
-### Testes de aceitação (TA)
+## Testes de aceitação (TA)
 
 | Código | Descrição |
 | ------ | --------- |
@@ -85,7 +109,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | TA02.32 | Um usuário _Administrador_ logado tenta excluir um projeto e o sistema exibe um forulário com botões para confirmar ou cancelar a operação, o usuário confirma a operação, o sistema exclui o registro, o redireciona para a página inicial e exibe a mensagem "Projeto excluido" |
 | TA02.33 | Um usuário _Administrador_ logado tenta excluir um projeto e o sistema exibe um forulário com botões para confirmar ou cancelar a operação, o usuário cancela a operação e o sistema mantém o registro |
 
-### User Story US03 - Manter Fluxo de desenvolvimento
+## User Story US03 - Manter Fluxo de desenvolvimento
 
 |           |           |
 | --------- | --------- |
@@ -100,8 +124,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor**               | Joan (responsável por avaliar a implementação e executar os testes de unidade e testes de integração) |
 | **Testador**              | Guilherme (responsável por executar os Testes de Aceitação e fazer o relatório de testes) |
 
-
-### **Testes de Aceitação (TA)**
+## **Testes de Aceitação (TA)**
 
 | **Código**  | **Descrição** |     
 | ----------- | ------------- |
