@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from .forms import ProjectForm
 
 def homeProject(request):
-    return render(request, 'home.html')
+    return render(request, 'projects/home.html')
 
 def newProject(request):
     
@@ -12,10 +12,10 @@ def newProject(request):
 
         if form.is_valid():
             form.save()
-            return redirect('/projects')
+            return redirect('/projetos')
         
     else :
         form = ProjectForm()
-        return render(request, 'newProject.html', {'form': form})
+        return render(request, 'projects/newProject.html', {'form': form})
 
            
