@@ -33,9 +33,20 @@ class ProjetoUpdateView(TestCase):
 
 class ProjetoGetAllProjets(TestCase):
 
+    def setUp(self):
+        self.client = Client()
+        self.list_url = reverse('get')
+        self.detail = reverse('detail')
+
     def test_get_All_Projects(self):
-        client = Client()
-        response = client.get(reverse('get'))
+        response = self.client.get(self.list_url)
 
         self.assertEquals(response.status_code,200)
         self.assertTemplateUsed(response, 'projects/index.html')
+    
+    def test_project_detail_GET(self):
+        response = self.client.get(self.list_url)
+
+        self.assertEquals(response.status_code,200)
+        self.assertTemplateUsed(response, 'projects/<int:pk>/project-detail.html')
+
