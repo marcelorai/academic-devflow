@@ -48,5 +48,5 @@ class ProjetoGetAllProjets(TestCase):
         response = self.client.get(self.list_url)
 
         self.assertEquals(response.status_code,200)
-        self.assertTemplateUsed(response, 'projects/<int:pk>/project-detail.html')
+        self.assertTemplateUsed(response, 'projects/project-detail/<int:pk>/project-detail.html')
 

@@ -16,3 +16,9 @@ update_view = ProjetoUpdateView.as_view()
 def get_All_Projects(request):
     lista_projetos = Projeto.objects.all()
     return render(request, 'projects/index.html', {'projects' : lista_projetos})
+
+def project_detail(request,pk):
+
+    if request.method == 'GET':
+        projeto = Projeto.objects.get(pk=pk)
+        return render(request,'project-detail.html',{'project': projeto})
