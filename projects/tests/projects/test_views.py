@@ -1,7 +1,7 @@
 from django.test import TestCase,Client
 from django.urls import reverse_lazy,reverse
 from projects.models import Projeto
-
+from projects.views import update_view, get_All_Projects
 
 class ProjetoUpdateView(TestCase):
     DESCRICAO = 'Teste do modelo projeto'
@@ -32,11 +32,10 @@ class ProjetoUpdateView(TestCase):
         self.assertIsNotNone(projeto_atualizado)
 
 class ProjetoGetAllProjets(TestCase):
-    def setup(self):
-        self.client = Client()
-        self.url_list = reverse('get')
 
     def test_get_All_Projects(self):
-        response = self.client.get(self.url_list)
-        self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response,'projects/index.html')
+        client = Client()
+        response = client.get(reverse('get'))
+
+        self.assertEquals(response.status_code,200)
+        self.assertTemplateUsed(response, 'projects/index.html')
