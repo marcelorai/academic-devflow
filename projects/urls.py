@@ -7,5 +7,6 @@ urlpatterns = [
 
     path('', homeProject),
     path('<int:pk>/editar', update_view, name='update'),
-    path('register/', newProject, name='register')
+    path('registrar/', newProject, name='register')
+
 ]

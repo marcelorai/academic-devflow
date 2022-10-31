@@ -1,11 +1,10 @@
 from django.db import models
 
-
 class Projeto(models.Model):
-    descricao = models.TextField(blank=True, null=True)
-    dt_inicio = models.DateField()
-    dt_termino = models.DateField(blank=True, null=True)
     nome = models.CharField(max_length=70)
+    descricao = models.TextField(blank=True, null=True)
+    data_inicio = models.DateField()
+    data_termino = models.DateField(blank=True, null=True)
     situacao = models.CharField(max_length=50)
 
     def __str__(self):

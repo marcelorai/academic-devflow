@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+
 from .forms import ProjectForm
 from django.views.generic import UpdateView
 from projects.models import Projeto
@@ -14,7 +14,7 @@ def newProject(request):
 
         if form.is_valid():
             form.save()
-            return redirect('/projects')
+            return redirect('/projetos')
         
     else :
         form = ProjectForm()
