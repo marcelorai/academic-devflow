@@ -56,9 +56,10 @@ class ProjetoGetAllProjets(TestCase):
     def test_get_some(self): 
         
         response = self.client.get(self.list_url)
-
+        objetos  = Projeto.objects.all()
+        
         self.assertEquals(response.status_code,200)
-        self.assertTrue(self.objeto)
+        self.assertTrue(objetos)
 
     
 
