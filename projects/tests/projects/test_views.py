@@ -1,9 +1,8 @@
+from ast import Return
 from django.test import TestCase,Client
 from django.urls import reverse_lazy,reverse
 from projects.models import Projeto
 from projects.views import update_view,project_list
-
-app_name = 'projects'
 
 class ProjetoUpdateView(TestCase):
     DESCRICAO = 'Teste do modelo projeto'
@@ -35,20 +34,34 @@ class ProjetoUpdateView(TestCase):
 
 class ProjetoGetAllProjets(TestCase):
 
+    DESCRICAO = 'Teste do modelo projeto'
+    DT_INICIO = '2010-10-10'
+    DT_TERMINO = '2011-11-11'
+    NOME = 'Teste'
+    SITUACAO = 'Em desenvolvimento'
+
     def setUp(self):
         self.client = Client()
         self.list_url = reverse('projects:project_list')
-        self.detail = reverse('projects:detail')
+        self.objeto = Projeto.objects.create(descricao=self.DESCRICAO, dt_inicio=self.DT_INICIO,
+                                                  dt_termino=self.DT_TERMINO, nome=self.NOME, situacao=self.SITUACAO)
 
     def test_project_list(self):
         response = self.client.get(self.list_url)
 
         self.assertEquals(response.status_code,200)
-        self.assertTemplateUsed(response, 'projects/project_list/index.html')
+        self.assertTemplateUsed(response, 'projects/index.html')
 
-    def test_project_detail_GET(self):
+        
+    def test_get_some(self): 
+        
         response = self.client.get(self.list_url)
 
         self.assertEquals(response.status_code,200)
-        self.assertTemplateUsed(response, 'projects/project-detail/<int:pk>/project-detail.html')
+        self.assertTrue(self.objeto)
+
+    
+
+            
+
 
