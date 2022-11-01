@@ -13,7 +13,7 @@ class ProjetoUpdateView(UpdateView):
 
 update_view = ProjetoUpdateView.as_view()
 
-def get_All_Projects(request):
+def project_list(request):
     lista_projetos = Projeto.objects.all()
     return render(request, 'projects/index.html', {'projects' : lista_projetos})
 
