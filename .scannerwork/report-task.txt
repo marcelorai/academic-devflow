@@ -1,0 +1,6 @@
+projectKey=academic-devflow
+serverUrl=http://labens.dct.ufrn.br/sonarqube
+serverVersion=9.4.0.54424
+dashboardUrl=http://labens.dct.ufrn.br/sonarqube/dashboard?id=academic-devflow
+ceTaskId=AYQzgsmLUEeskQeC9eW8
+ceTaskUrl=http://labens.dct.ufrn.br/sonarqube/api/ce/task?id=AYQzgsmLUEeskQeC9eW8
