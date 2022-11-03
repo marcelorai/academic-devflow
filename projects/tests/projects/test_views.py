@@ -71,8 +71,8 @@ class ProjetoGetAllProjets(TestCase):
     def setUp(self):
         self.client = Client()
         self.list_url = reverse('projects:project_list')
-        self.objeto = Projeto.objects.create(descricao=self.DESCRICAO, dt_inicio=self.DT_INICIO,
-                                                  dt_termino=self.DT_TERMINO, nome=self.NOME, situacao=self.SITUACAO)
+        self.objeto = Projeto.objects.create(descricao=self.DESCRICAO, data_inicio=self.DT_INICIO,
+                                                  data_termino=self.DT_TERMINO, nome=self.NOME, situacao=self.SITUACAO)
 
     def test_project_list(self):
         response = self.client.get(self.list_url)
