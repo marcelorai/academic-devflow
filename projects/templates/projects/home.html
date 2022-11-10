@@ -4,11 +4,19 @@
 
 {% block content %}
 
-<div class="home-project">
+<div class="home_project" id="home_project">
     <h1> Projetos </h1>
 
     <a href="registrar" target="_blank" rel="noopener noreferrer">Adicionar</a>
-    <button id="filtrar_projeto" name="filtrar_projeto" onclick="filterProjects()">Filtrar</button>
+    <button class="filter_project_button disabled" id="filter_project_button" name="filter_project_button" onclick="filterProjects()">Filtrar</button>
+    
+    <form class="filter_project_form" id="filter_project_form">  
+        <input 
+            class="filter_project_input"
+            type="text" 
+            name="input_filtrar_projeto" 
+            placeholder="Nome do projeto">
+    </form>
 </div>
 
 
