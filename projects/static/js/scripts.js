@@ -1,0 +1,4 @@
+
+const filterProjects = () => {
+    alert("Funcionou!")
+}
