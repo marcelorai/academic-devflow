@@ -23,3 +23,8 @@
     color: whitesmoke;
     width: fit-content;
 }
+
+.home-project a:hover {
+    color: whitesmoke;
+
+}
