@@ -6,10 +6,33 @@
 
 <div class="home_project" id="home_project">
     <h1> Projetos </h1>
-
-    <a href="registrar" target="_blank" rel="noopener noreferrer">Adicionar</a>
-    <button class="filter_project_button disabled" id="filter_project_button" name="filter_project_button" onclick="filterProjects()">Filtrar</button>
     
+    <div class="group_buttons">
+        <a 
+            href="registrar" 
+            target="_blank" 
+            rel="noopener noreferrer">
+            Adicionar
+        </a>
+        <a 
+            type="button"
+            class="filter_project_button disabled" 
+            id="filter_project_button" 
+            name="filter_project_button" 
+            onclick="filterProjects()">
+            Filtrar
+        </a>
+        <a 
+            type="button"
+            class="button_to_list_all_projects" 
+            id="button_to_list_all_projects" 
+            name="button_to_list_all_projects" 
+            href="listar"
+            target="_blank">
+            Listar todos
+        </a>
+    </div>
+
     <form class="filter_project_form" id="filter_project_form">  
         <input 
             class="filter_project_input"
