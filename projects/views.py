@@ -4,8 +4,7 @@ from django.shortcuts import render, redirect
 from .forms import ProjectForm
 
 def homeProject(request):
-    projects = Projeto.objects.all()
-    return render(request, 'projects/home.html', {'projects': projects})
+    return render(request, 'projects/home.html')
 
 def newProject(request):
     
@@ -22,7 +21,7 @@ def newProject(request):
 
 def project_list(request):
     projects = Projeto.objects.all()
-    return render(request, 'projects/home.html', {'projects' : projects})
+    return render(request, 'projects/list_all_projects.html', {'projects' : projects})
 
 class ProjetoUpdateView(UpdateView):
     model = Projeto
