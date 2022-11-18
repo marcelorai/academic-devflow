@@ -70,7 +70,7 @@ class ProjetoGetAllProjets(TestCase):
 
     def setUp(self):
         self.client = Client()
-        self.list_url = reverse('projects:project_list')
+        self.list_url = reverse('projects:listar')
         self.objeto = Projeto.objects.create(descricao=self.DESCRICAO, data_inicio=self.DT_INICIO,
                                                   data_termino=self.DT_TERMINO, nome=self.NOME, situacao=self.SITUACAO)
 
@@ -89,8 +89,28 @@ class ProjetoGetAllProjets(TestCase):
         self.assertEquals(response.status_code,200)
         self.assertTrue(objetos)
 
-    
+class TestViewDeleteProject(TestCase):
 
-            
+    def setUp(self):
+        self.client = Client()
+        self.ProjectTest = Projeto.objects.create(
+            nome = 'Nome teste',
+            descricao = 'Descrição teste',
+            data_inicio = '2010-10-10',
+            data_termino = '2011-11-11',
+            situacao = 'Em desenvolvimento'
+        )
+
+        self.register_url = reverse_lazy('projects:excluir', args=[self.ProjectTest.id])
+
+    def test_view_delete_project(self):
+        url = self.register_url
+        id = {
+            "id": self.ProjectTest.id
+        }
+
+        response = self.client.delete(url, id)
+        self.assertEquals(response.status_code, 204)
+        self.assertEquals(self.ProjectTest.DoesNotExist, True)
 
 

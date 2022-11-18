@@ -6,7 +6,7 @@ app_name = 'projects'
 urlpatterns = [
 
     path('', homeProject),
-    path('listar/', project_list, name='project_list'),
+    path('listar/', project_list, name='listar'),
     path('<int:pk>/editar', update_view, name='update'),
     path('registrar/', newProject, name='registrar')
 
