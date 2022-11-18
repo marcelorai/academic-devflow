@@ -1,6 +1,6 @@
 from django.views.generic import UpdateView
 from projects.models import Projeto
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ProjectForm
 
 def homeProject(request):
@@ -32,4 +32,12 @@ class ProjetoUpdateView(UpdateView):
 
 
 update_view = ProjetoUpdateView.as_view()
+
+
+def view_delete_project(request, pk):
+    project = Projeto.objects.get(id=pk)
+    project.delete()
+
+    return render(request, 'projects/list_all_projects.html')
+
 
