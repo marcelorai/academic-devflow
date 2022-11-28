@@ -9,6 +9,8 @@
     padding: 10px !important;
 }
 
+/* Template da página de Home  */
+
 .home_project {
     padding: 10px;
     display: flex;
@@ -62,6 +64,8 @@
     }
 }
 
+/*  Template de listagem dos projetos */
+
 .list_all_projects {
     padding: 20px;
 }
@@ -82,4 +86,35 @@
 
 .icon {
     color: red !important;
+}
+
+/* Template de adicionar projeto */
+
+.project_add_form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column
+}
+
+.project_add_form p {
+    display: flex;
+    flex-direction: column;
+}
+
+.project_add_form p input, textarea, select {
+    border: 1px solid grey;
+    outline: none;
+    text-indent: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+.save_project_button {
+    background-color: green;
+    border: none;
+    width: fit-content;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
 }
