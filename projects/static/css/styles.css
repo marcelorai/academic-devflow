@@ -9,17 +9,77 @@
     padding: 10px !important;
 }
 
-.home-project {
+.home_project {
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.home-project a {
+.home_project a {
     text-decoration: none;
     background-color: #42ACF0;
     padding: 10px;
     color: whitesmoke;
     width: fit-content;
+}
+
+.home_project a:hover {
+    color: whitesmoke;
+
+}
+
+.group_buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.filter_project_form {
+    display: none;
+}
+
+.filter_project_input {
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #42ACF0;
+    outline: none;
+    padding-bottom: 5px;
+    background-color: transparent;
+    animation-name: filter_project_input;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes filter_project_input {
+    from {
+        margin-top: 0px;
+        opacity: 0;
+    } 
+
+    to {
+        margin-top: 10px;
+        opacity: 1;
+    }
+}
+
+.list_all_projects {
+    padding: 20px;
+}
+
+.list_button_group {
+    display: flex;
+    width: 100%;
+    align-items: right;
+    justify-content: right;
+}
+
+.list_button_group button {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+
+}
+
+.icon {
+    color: red !important;
 }

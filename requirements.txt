@@ -1,4 +1,11 @@
 asgiref==3.5.2
 Django==4.1.2
 sqlparse==0.4.3
+
+# Cobertura de testes
 coverage==6.5.0
+
+# Icones da aplicação 
+fontawesomefree==6.2.1
+
+

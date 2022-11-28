@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+
+{% block title %} Lista de projetos {% endblock %} 
+
+{% block content %}
+
+<div class="list_all_projects">
+    <div class="list_button_group">
+        <button><i class="fa-solid fa-trash fa-lg icon"></i></button>
+    </div>
+    <table class="table project_list_table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Situação</th>
+                <th scope="col">Data de Início</th>
+                <th scope="col">Data de Finalização</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for project in projects %} 
+        
+            <tr>
+                <th><input type="checkbox" name="" id={{project.id}}></th>
+                <th scope="row">{{project.id}}</th>
+                <td>{{project.nome}}</td>
+                <td>{{project.situacao}}</td>
+                <td>{{project.data_inicio}}</td>
+                <td>{{project.data_termino}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
