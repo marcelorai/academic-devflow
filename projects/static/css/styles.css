@@ -75,19 +75,22 @@
     width: 100%;
     align-items: right;
     justify-content: right;
+    gap: 10px;
 }
 
 .list_button_group button {
-    border: none;
+    border: 1px solid grey;
     background-color: transparent;
     margin-bottom: 10px;
+    padding: 10px;
+    width: 50px;
+    border-radius: 8px;
 
 }
 
-.icon {
-    color: red !important;
+.icon_trash , .icon_edit {
+    color: grey;
 }
-
 /* Template de adicionar projeto */
 
 .project_add_form {
@@ -104,7 +107,7 @@
 .project_add_form p input, textarea, select {
     border: 1px solid grey;
     outline: none;
-    text-indent: 10px;
+    text-indent: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
