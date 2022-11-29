@@ -113,8 +113,17 @@
     padding-right: 5px;
 }
 
+.project_add_form p input[type='date'], 
+.project_add_form p select {
+    width: fit-content;
+}
+
+.project_add_form p select {
+    background-color: transparent;
+}
+
 .save_project_button {
-    background-color: green;
+    background-color: #42ACF0;
     border: none;
     width: fit-content;
     padding: 10px;
