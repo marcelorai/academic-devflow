@@ -37,6 +37,23 @@ const check_checkboxes = () => {
     }
 }
 
+const return_project_to_be_deleted = () => {
+    const get_all_checkboxes = document.querySelectorAll('[name="codigo"]')
+    let id = 0
+    get_all_checkboxes.forEach(element => {
+        if(element.checked){
+            id = parseInt(element.id)
+        }
+    });
+
+    return id
+}
+
+const delete_project = () => {
+    const project_to_be_deleted = return_project_to_be_deleted()
+    window.location.href = `${project_to_be_deleted}/excluir`
+
+}
 
 
 

@@ -38,6 +38,6 @@ def view_delete_project(request, pk):
     project = Projeto.objects.get(id=pk)
     project.delete()
 
-    return render(request, 'projects/list_all_projects.html')
+    return redirect('/projetos/listar')
 
 
