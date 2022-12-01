@@ -18,6 +18,7 @@
 | Joan de Azevedo Medeiros     | à definir
 | Marcelo Rai Araujo           | à definir
 
+
 ## Descrição do Projeto 
 
 <p align="justify">Sistema para facilitar o acompanhamento do andamento de Projetos de Software dos discentes nas turmas Engenharia de Software do curso de Bacharelado em Sistemas de Informação do CERES/UFRN. </p>
