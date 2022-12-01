@@ -109,7 +109,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | TA03.32 | Um usuário _Administrador_ logado tenta excluir um projeto e o sistema exibe um forulário com botões para confirmar ou cancelar a operação, o usuário confirma a operação, o sistema exclui o registro, o redireciona para a página inicial e exibe a mensagem "Projeto excluido" |
 | TA03.33 | Um usuário _Administrador_ logado tenta excluir um projeto e o sistema exibe um forulário com botões para confirmar ou cancelar a operação, o usuário cancela a operação e o sistema mantém o registro |
 
-## User Story US03 - Manter Fluxo de desenvolvimento
+## User Story US04 - Manter Fluxo de desenvolvimento
 
 |           |           |
 | --------- | --------- |
@@ -124,12 +124,12 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor**               | Joan (responsável por avaliar a implementação e executar os testes de unidade e testes de integração) |
 | **Testador**              | Guilherme (responsável por executar os Testes de Aceitação e fazer o relatório de testes) |
 
-## **Testes de Aceitação (TA)**
+### **Testes de Aceitação (TA)**
 
 | **Código**  | **Descrição** |
 | ----------- | ------------- |
-| **TA03.01** | O usuário deseja cadastrar um novo fluxo de desenvolvimento, então o usuário clica no botão inserir fluxo de desenvolvimento. O usuário preenche todos os campos de modo correto e clica em Salvar/Cadastrar, recebendo uma notificação em tela de sucesso, como "Fluxo de desenvolvimento cadastrado com sucesso". |
-| **TA03.02** | O usuário deseja cadastrar um novo fluxo de desenvolvimento, então o usuário clica no botão inserir fluxo de desenvolvimento. O usuário preenche algum campo ou todos os campos de modo incorreto e clica em Salvar/Cadastrar, o usuário é notificado com uma mensagem de erro. Mensagem: Cadastro não realizado, o campo “xxxx” não foi informado corretamente. |
-| **TA03.03** | O usuário deseja alterar o fluxo de desenvolvimento, então o usuário clica no botão editar fluxo de desenvolvimento. O usuário altera os campos que deseja de modo correto e clica em Editar/Salvar, recebendo uma notificação em tela de sucesso, como "Fluxo de desenvolvimento alterado com sucesso". |
-| **TA03.04** | O usuário deseja alterar o fluxo de desenvolvimento, então o usuário clica no botão editar fluxo de desenvolvimento. O usuário altera algum campo ou todos os campos de modo incorreto e clica em Editar/Salvar, o usuário é notificado com uma mensagem de erro. Mensagem: A operação falhou, o campo “xxxx” não foi informado corretamente. |
-| **TA03.05** | O usuário deseja excluir o fluxo de desenvolvimento, o usuário clica no botão excluir, caso o fluxo de desenvolvimento já possua etapas cadastradas, o sistema deve informar ao usuário e perguntar se realmente deseja excluir o fluxo de desenvolvimento, caso o usuário confirme, o sistema envia o fluxo para a lixeria e notifica ao usuário com uma mensagem de sucesso. Mensagem: "Fluxo de desenvolvimento excluído com sucesso".   Caso o usuário não confirme, ele deve ser notificado com uma mensagem informando que nenhuma mudança ocorreu. |
+| **TA04.01** | O usuário deseja cadastrar um novo fluxo de desenvolvimento, então o usuário clica no botão inserir fluxo de desenvolvimento. O usuário preenche todos os campos de modo correto e clica em Salvar/Cadastrar, recebendo uma notificação em tela de sucesso, como "Fluxo de desenvolvimento cadastrado com sucesso". |
+| **TA04.02** | O usuário deseja cadastrar um novo fluxo de desenvolvimento, então o usuário clica no botão inserir fluxo de desenvolvimento. O usuário preenche algum campo ou todos os campos de modo incorreto e clica em Salvar/Cadastrar, o usuário é notificado com uma mensagem de erro. Mensagem: Cadastro não realizado, o campo “xxxx” não foi informado corretamente. |
+| **TA04.03** | O usuário deseja alterar o fluxo de desenvolvimento, então o usuário clica no botão editar fluxo de desenvolvimento. O usuário altera os campos que deseja de modo correto e clica em Editar/Salvar, recebendo uma notificação em tela de sucesso, como "Fluxo de desenvolvimento alterado com sucesso". |
+| **TA04.04** | O usuário deseja alterar o fluxo de desenvolvimento, então o usuário clica no botão editar fluxo de desenvolvimento. O usuário altera algum campo ou todos os campos de modo incorreto e clica em Editar/Salvar, o usuário é notificado com uma mensagem de erro. Mensagem: A operação falhou, o campo “xxxx” não foi informado corretamente. |
+| **TA04.05** | O usuário deseja excluir o fluxo de desenvolvimento, o usuário clica no botão excluir, caso o fluxo de desenvolvimento já possua etapas cadastradas, o sistema deve informar ao usuário e perguntar se realmente deseja excluir o fluxo de desenvolvimento, caso o usuário confirme, o sistema envia o fluxo para a lixeria e notifica ao usuário com uma mensagem de sucesso. Mensagem: "Fluxo de desenvolvimento excluído com sucesso".   Caso o usuário não confirme, ele deve ser notificado com uma mensagem informando que nenhuma mudança ocorreu. |
