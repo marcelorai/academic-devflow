@@ -18,7 +18,7 @@ Faça o download do código fonte na [página inicial do repositório](https://g
 caso escolha baixar em formato .zip, lembre-se de descompactar o arquivo após o
 download.
 
-Em seguida abra a pasta com o código em uma interface de linha comando, de
+Em seguida abra a pasta com o código em uma interface de linha de comando, de
 acordo com as instruções abaixo.
 
 No windows:
@@ -58,5 +58,3 @@ Execute o comando `python3 manage.py runserver`.
 
 O servidor será iniciado no endereço `localhost:8000`, para pará-lo basta ir na
 linha de comando e apertar `Ctrl C`.
-
-Caso esteja usando windows, utilize `py` ao invés de `python3`.
