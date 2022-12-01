@@ -6,8 +6,7 @@
 | ---------------------------- | --------------------------------- | ------------------------------ |
 | Adriel Faria dos Santos      | Desenvolvedor, Testador           | adriel.fsantos@outlook.com     |
 | Guilherme Angelo de Medeiros | Desenvolvedor, Testador           | guilhermeangelo2001@gmail.com  |
-| Joan de Azevedo Medeiros     | Desenvolvedor, Testador e Gerente | joan.medeiros.130@ufrn.edu.br  |
-| Marcelo Rai Araujo           | Desenvolvedor, Testador           | marcelorai12@gmail.com         |
+| Hilário Petronio D.M.Dantas  | Desenvolvedor, Testador e Gerente | joan.medeiros.130@ufrn.edu.br  |
 
 ## Matriz de Competências 
 
@@ -15,8 +14,8 @@
 | ---------------------------- | -----------
 | Adriel Faria dos Santos      | à definir
 | Guilherme Angelo de Medeiros | à definir
-| Joan de Azevedo Medeiros     | à definir
-| Marcelo Rai Araujo           | à definir
+| JHilário Petronio D.M.Dantas | à definir
+
 
 ## Descrição do Projeto 
 
