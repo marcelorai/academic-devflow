@@ -71,7 +71,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor** | - |
 | **Testador** | - |
 
-## Testes de aceitação (TA)
+### Testes de aceitação (TA)
 
 | Código | Descrição |
 | ------ | --------- |
@@ -134,3 +134,45 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **TA03.04** | O usuário deseja alterar o fluxo de desenvolvimento, então o usuário clica no botão editar fluxo de desenvolvimento. O usuário altera algum campo ou todos os campos de modo incorreto e clica em Editar/Salvar, o usuário é notificado com uma mensagem de erro. Mensagem: A operação falhou, o campo “xxxx” não foi informado corretamente. | 
 | **TA03.05** | O usuário deseja excluir o fluxo de desenvolvimento, o usuário clica no botão excluir, caso o fluxo de desenvolvimento já possua etapas cadastradas, o sistema deve informar ao usuário e perguntar se realmente deseja excluir o fluxo de desenvolvimento, caso o usuário confirme, o sistema envia o fluxo para a lixeria e notifica ao usuário com uma mensagem de sucesso. Mensagem: "Fluxo de desenvolvimento excluído com sucesso".   Caso o usuário não confirme, ele deve ser notificado com uma mensagem informando que nenhuma mudança ocorreu. |          
 
+## User Story US05 - Manter etapa
+
+|     |     |
+| --- | --- |
+| **Descrição** | O sistema deve permitir o cadastro, visualização, edição e exclusão de etapas de fluxos. Membros podem apenas visualizar as informações dos projetos aos quais fazem parte. Coordenadores podem criar, visualizar e editar etapas dos fluxos criados por ele, nos casos de fluxos criados por outros usuários, apenas a visualização é possível, a exclusão é permitida apenas quando o coordenador faz parte do projeto e a etapa não foi iniciada ainda. Administradores podem realizar as quatro operações de forma irrestrita, exceto ao tentar excluir uma etapa que já iniciou. Todas as operações demandam que o usuário esteja logado. |
+| **Requisitos envolvidos** | RF01, RF03, RF04, RNF01, RNF02, RNF03 |
+| **Prioridade** | Importante |
+| **Estimativa** | 10h |
+| **Tempo gasto (real)** | - |
+| **Tamanho funcional** | 7PF (Pontos de função) |
+| **Analista** | Adriel Faria dos Santos |
+| **Desenvolvedor** | - |
+| **Revisor** | - |
+| **Testador** | - |
+
+### Testes de aceitação
+
+| Código  | Descrição |
+| ------- | --------- |
+| TA04.01 | Um usuário deseja visualizar uma etapa de um fluxo de projeto. O usuário não está logado. O sistema o redireciona para a tela de login. |
+| TA04.02 | Um usuário deseja editar uma etapa de um fluxo de projeto. O usuário não está logado. O sistema o redireciona para a tela de login. |
+| TA04.03 | Um usuário deseja excluir uma etapa de um fluxo de projeto. O usuário não está logado. O sistema o redireciona para a tela de login. |
+| TA04.04 | Um usuário deseja adicionar uma etapa a um fluxo de projeto. O usuário não está logado. O sistema o redireciona para a tela de login. |
+| TA04.05 | Um usuário aluno deseja visualizar uma etapa de um fluxo de projeto. O usuário não faz parte daquele projeto. O sistema impede a visualização. |
+| TA04.06 | Um usuário aluno deseja visualizar uma etapa de um fluxo de projeto. O usuário faz parte daquele projeto. O sistema permite a visualização, o redirecionando para a tela de visualização de etapa. |
+| TA04.07 | Um usuário aluno deseja editar uma etapa de um fluxo de projeto. O sistema impede a edição. |
+| TA04.08 | Um usuário aluno deseja excluir uma etapa de um fluxo de projeto. O sistema impede a exclusão. |
+| TA04.09 | Um usuário aluno deseja adicionar uma etapa a um fluxo de projeto. O sistema impede a criação. |
+| TA04.10 | Um usuário coordenador deseja visualizar uma etapa de um fluxo de projeto. O sistema permite a visualização, o redirecionando para a tela de visualização de etapa. |
+| TA04.11 | Um usuário coordenador deseja editar uma etapa de um fluxo de projeto. O usuário não faz parte do projeto. O sistema impede a edição. |
+| TA04.12 | Um usuário coordenador deseja editar uma etapa de um fluxo de projeto. O usuário faz parte do projeto. O sistema permite a edição, mostrando um formulário já preenchido com os campos nome, descrição (opcional), data de início, data de finalização, usar gameficação, e posicao da etapa no fluxo. O usuário altera alguns campos, mas todos os campos obrigatórios estão preenchidos. O usuário submete o formulário. O sistema altera a etapa. |
+| TA04.13 | Um usuário coordenador deseja excluir uma etapa de um fluxo de projeto. O usuário faz parte do projeto e ainda não iniciou. O sistema permite a exclusão, mostrando uma caixa de confirmação. O usuário confirma a exclusão. O sistema exclui a etapa. |
+| TA04.14 | Um usuário coordenador deseja excluir uma etapa de um fluxo de projeto. O usuário faz parte do projeto mas ela já iniciou. O sistema impede a exclusão. |
+| TA04.15 | Um usuário coordenador deseja excluir uma etapa de um fluxo de projeto. O usuário faz parte do projeto. O sistema impede a exclusão. |
+| TA04.16 | Um usuário coordenador deseja adicionar uma etapa a um fluxo de projeto. O usuário não faz parte do projeto. O sistema impede a criação. |
+| TA04.17 | Um usuário coordenador deseja adicionar uma etapa a um fluxo de projeto. O usuário faz parte do projeto. O sistema permite a criação, mostrando um formulário com os campos nome, descrição (opcional), data de início, data de finalização, usar gameficação, e posicao da etapa no fluxo. O usuário preenche todos os campos obrigatórios e o campo data de finalização tem um valor superior ou igual a dataatual. O usuário submete o formulário. O sistema cria a etapa. |
+| TA04.18 | Um usuário coordenador deseja adicionar uma etapa a um fluxo de projeto. O usuário faz parte do projeto. O sistema permite a criação, mostrando um formulário com os campos nome, descrição (opcional), data de início, data de finalização, usar gameficação, e posicao da etapa no fluxo. O usuário preenche todos os campos obrigatórios e o campo data de finalização tem um valor inferior a data atual. O sistema não permite a submissão do formulário, exibindo a mensagem de validação "A etapa não pode finalizar em uma data anteior a hoje". |
+| TA04.19 | Um usuário administrador deseja visualizar uma etapa de um fluxo de projeto. O sistema redireciona para a tela de visualização de etapa. |
+| TA04.20 | Um usuário administrador deseja editar uma etapa de um fluxo de projeto. O sistema permite a edição, mostrando um formulário já preenchido com os campos nome, descrição (opcional), data de início, data de finalização, usar gameficação, e posicao da etapa no fluxo. O usuário altera alguns campos, mas todos os campos obrigatórios estão preenchidos. O usuário submete o formulário. O sistema altera a etapa. |
+| TA04.21 | Um usuário administrador deseja excluir uma etapa de um fluxo de projeto. O etapa ainda não iniciou. O sistema permite a exclusão, mostrando uma caixa de confirmação. O usuário confirma a exclusão. O sistema exclui a etapa. |
+| TA04.22 | Um usuário administrador deseja excluir uma etapa de um fluxo de projeto, mas ela já iniciou. O sistema impede a exclusão. |
+| TA04.23 | Um usuário administrador deseja adicionar uma etapa a um fluxo de projeto. O sistema permite a criação, mostrando um formulário com os campos nome, descrição (opcional), data de início, data de finalização, usar gameficação, e posicao da etapa no fluxo. O usuário preenche todos os campos obrigatórios. O usuário submete o formulário. O sistema cria a etapa. |
