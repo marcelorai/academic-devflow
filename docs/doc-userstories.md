@@ -20,7 +20,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor**                  | Não Definido                                                                                                                                                                                                          |
 | **Testador**                 | Não Definido                                                                                                                                                                                                          |
 
-### Teste de Aceitação
+### US01 - Testes de aceitação (TA)
 
 | **Código**  | **Descrição** |
 |-------------|---------------|
@@ -47,7 +47,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor**                  | Não Definido                                                                                                                                                                                                          |
 | **Testador**                 | Não Definido                                                                                                                                                                                                          |
 
-### Teste de Aceitação
+### US02 - Testes de aceitação (TA)
 
 | **Código**  | **Descrição** |
 |-------------|---------------|
@@ -71,7 +71,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor** | - |
 | **Testador** | - |
 
-### Testes de aceitação (TA)
+### US03 - Testes de aceitação (TA)
 
 | Código | Descrição |
 | ------ | --------- |
@@ -124,7 +124,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor**               | Joan (responsável por avaliar a implementação e executar os testes de unidade e testes de integração) |
 | **Testador**              | Guilherme (responsável por executar os Testes de Aceitação e fazer o relatório de testes) |
 
-### **Testes de Aceitação (TA)**
+### US04 - Testes de Aceitação (TA)
 
 | **Código**  | **Descrição** |
 | ----------- | ------------- |
