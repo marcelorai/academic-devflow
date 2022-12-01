@@ -149,7 +149,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor** | - |
 | **Testador** | - |
 
-### Testes de aceitação
+### US05 - Testes de aceitação (TA)
 
 | Código  | Descrição |
 | ------- | --------- |
