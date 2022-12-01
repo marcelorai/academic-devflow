@@ -56,7 +56,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **TA02.03** | No seu perfil, o usuário deverá ser capaz de visualizar todas as informações ao qual ele tem acesso. |
 | **TA02.04** | No seu perfil, o usuário poderá listar informações desejadas e exportar os dados para um arquivo em formato de planilha, ao clicar em Exportar ele é notificado com uma mensagem de sucesso. É exibida a Mensagem: Lista "xxxx" exportada com sucesso. |
 
-## User Story US02 - Manter projeto
+## User Story US03 - Manter projeto
 
 |     |     |
 | --- | --- |
@@ -71,43 +71,43 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Revisor** | - |
 | **Testador** | - |
 
-## Testes de aceitação (TA)
+### Testes de aceitação (TA)
 
 | Código | Descrição |
 | ------ | --------- |
-| TA02.01 | Um usuário não logado tenta visualizar um projeto cadastrado e não consegue, o sistema exibe a mensagem "Você precisa fazer login para visualizar projetos" |
-| TA02.02 | Um usuário _Membro_ logado tenta visualizar um projeto do qual não faz parte e não consegue, o sistema exibe a mensagem "Você não possui permipermissão para visualizar esse projeto" |
-| TA02.03 | Um usuário _Membro_ logado tenta visualizar um projeto do qual faz parte e consegue, o sistema exibe os dados referentes ao projeto |
-| TA02.04 | Um usuário _Coordenador_ logado tenta visualizar um projeto do qual não faz parte e não consegue, o sistema exibe a mensagem "Você não possui permissão para visualizar esse projeto" |
-| TA02.05 | Um usuário _Coordenador_ logado tenta visualizar um projeto do qual faz parte e consegue, o sistema exibe os dados referentes ao projeto |
-| TA02.06 | Um usuário _Administrador_ logado tenta visualizar um projeto do qual não faz parte e consegue, o sistema exibe os dados referentes ao projeto |
-| TA02.07 | Um usuário _Administrador_ logado tenta visualizar um projeto do qual faz parte e consegue, o sistema exibe os dados referentes ao projeto |
-| TA02.08 | Um usuário não logado tenta cadastrar um projeto e não consegue, o sistema exibe a mensagem "Você precisa fazer login para cadastrar projetos" |
-| TA02.09 | Um usuário _Membro_ logado tenta cadastrar um projeto e não consegue, o sistema exibe a mensagem "Você não possui permissão para cadastrar projetos" |
-| TA02.10 | Um usuário _Coordenador_ logado tenta cadastrar um projeto e é direcionado para um formulário com os campos **Nome**, **Descrição** (opcional), **Situação**, **Data de início**, **Data de término**, **Equipe** e **Fluxo** |
-| TA02.11 | Um usuário _Coordenador_ preenche o formulário de cadastro de projetos com todos os campos obrigatórios e o submete, o sistema salva o novo projeto e o redireciona para a página de visualização do projeto, que mostra os dados conforme foram preenchidos |
-| TA02.12 | Um usuário _Coordenador_ preenche o formulário de cadastro de projetos com todos os campos obrigatórios e opcionais, e o submete, o sistema salva o novo projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos |
-| TA02.13 | Um usuário _Coordenador_ não preenche todos os campos obrigatórios do formulário de cadastro de projetos e o submete, o sistema exibe a mensagem de erro "Há campos obrigatórios não preenchidos" |
-| TA02.14 | Um usuário _Administrador_ preenche o formulário de cadastro de projetos com todos os campos obrigatórios e o submete, o sistema salva o novo projeto e o redireciona para a página de visualização do projeto, que mostra os dados conforme foram preenchidos |
-| TA02.15 | Um usuário _Administrador_ preenche o formulário de cadastro de projetos com todos os campos obrigatórios e opcionais, e o submete, o sistema salva o novo projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos |
-| TA02.16 | Um usuário _Administrador_ não preenche todos os campos obrigatórios do formulário de cadastro de projetos e o submete, o sistema exibe a mensagem de erro "Há campos obrigatórios não preenchidos" |
-| TA02.17 | Um usuário não logado tenta editar um projeto e não consegue, o sistema exibe a mensagem "Você precisa fazer login para editar projetos" |
-| TA02.18 | Um usuário _Membro_ logado tenta editar um projeto e não consegue, o sistema exibe a mensagem "Você não possui permissão para editar projetos" |
-| TA02.19 | Um usuário _Coordenador_ logado tenta editar um projeto do qual não faz parte e não consegue, o sistema exibe a mensagem "Você não possui permissão para editar esse projeto" |
-| TA02.20 | Um usuário _Coordenador_ logado tenta editar um projeto do qual faz parte e é direcionado para um formulário com os campos **Nome**, **Descrição** (opcional), **Situação**, **Data de início**, **Data de término**, **Equipe** e **Fluxo** preenchidos com os dados salvos no banco |
-| TA02.21 | Um usuário _Coordenador_ preenche o formulário de edição de projeto, modificando todos os campos obrigatórios, deixando os campos opcionais em branco, e o submete, o sistema salva o projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos e a mensagem "Alterações salvas" |
-| TA02.22 | Um usuário _Coordenador_ preenche o formulário de edição de projeto, modificando todos os campos obrigatórios e opcionais, e o submete, o sistema salva o projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos e a mensagem "Alterações salvas" |
-| TA02.23 | Um usuário _Coordenador_ preenche o formulário de edição de projeto, deixando campos obrigatórios em branco, e o submete, o sistema exibe a mensagem "Há campos obrigatórios não preenchidos" |
-| TA02.24 | Um usuário _Administrador_ logado tenta editar um projeto do qual não faz parte e consegue, o sistema o redireciona para um formulário com os campos **Nome**, **Descrição** (opcional), **Situação**, **Data de início**, **Data de término**, **Equipe** e **Fluxo** preenchidos com os dados salvos no banco |
-| TA02.25 | Um usuário _Administrador_ logado tenta editar um projeto do qual faz parte e é direcionado para um formulário com os campos **Nome**, **Descrição** (opcional), **Situação**, **Data de início**, **Data de término**, **Equipe** e **Fluxo** preenchidos com os dados salvos no banco |
-| TA02.26 | Um usuário _Administrador_ preenche o formulário de edição de projeto, modificando todos os campos obrigatórios, deixando os campos opcionais em branco, e o submete, o sistema salva o projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos e a mensagem "Alterações salvas" |
-| TA02.27 | Um usuário _Administrador_ preenche o formulário de edição de projeto, modificando todos os campos obrigatórios e opcionais, e o submete, o sistema salva o projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos e a mensagem "Alterações salvas" |
-| TA02.28 | Um usuário _Administrador_ preenche o formulário de edição de projeto, deixando campos obrigatórios em branco, e o submete, o sistema exibe a mensagem "Há campos obrigatórios não preenchidos" |
-| TA02.29 | Um usuário não logado tenta excluir um projeto e não consegue, o sistema exibe a mensagem "Você precisa fazer login para excluir projetos" |
-| TA02.30 | Um usuário _Membro_ logado tenta excluir um projeto e não consegue, o sistema exibe a mensagem "Você não possui permissão para excluir projetos" |
-| TA02.31 | Um usuário _Coordenador_ logado tenta excluir um projeto e não consegue, o sistema exibe a mensagem "Você não possui permissão para excluir projetos" |
-| TA02.32 | Um usuário _Administrador_ logado tenta excluir um projeto e o sistema exibe um forulário com botões para confirmar ou cancelar a operação, o usuário confirma a operação, o sistema exclui o registro, o redireciona para a página inicial e exibe a mensagem "Projeto excluido" |
-| TA02.33 | Um usuário _Administrador_ logado tenta excluir um projeto e o sistema exibe um forulário com botões para confirmar ou cancelar a operação, o usuário cancela a operação e o sistema mantém o registro |
+| TA03.01 | Um usuário não logado tenta visualizar um projeto cadastrado e não consegue, o sistema exibe a mensagem "Você precisa fazer login para visualizar projetos" |
+| TA03.02 | Um usuário _Membro_ logado tenta visualizar um projeto do qual não faz parte e não consegue, o sistema exibe a mensagem "Você não possui permipermissão para visualizar esse projeto" |
+| TA03.03 | Um usuário _Membro_ logado tenta visualizar um projeto do qual faz parte e consegue, o sistema exibe os dados referentes ao projeto |
+| TA03.04 | Um usuário _Coordenador_ logado tenta visualizar um projeto do qual não faz parte e não consegue, o sistema exibe a mensagem "Você não possui permissão para visualizar esse projeto" |
+| TA03.05 | Um usuário _Coordenador_ logado tenta visualizar um projeto do qual faz parte e consegue, o sistema exibe os dados referentes ao projeto |
+| TA03.06 | Um usuário _Administrador_ logado tenta visualizar um projeto do qual não faz parte e consegue, o sistema exibe os dados referentes ao projeto |
+| TA03.07 | Um usuário _Administrador_ logado tenta visualizar um projeto do qual faz parte e consegue, o sistema exibe os dados referentes ao projeto |
+| TA03.08 | Um usuário não logado tenta cadastrar um projeto e não consegue, o sistema exibe a mensagem "Você precisa fazer login para cadastrar projetos" |
+| TA03.09 | Um usuário _Membro_ logado tenta cadastrar um projeto e não consegue, o sistema exibe a mensagem "Você não possui permissão para cadastrar projetos" |
+| TA03.10 | Um usuário _Coordenador_ logado tenta cadastrar um projeto e é direcionado para um formulário com os campos **Nome**, **Descrição** (opcional), **Situação**, **Data de início**, **Data de término**, **Equipe** e **Fluxo** |
+| TA03.11 | Um usuário _Coordenador_ preenche o formulário de cadastro de projetos com todos os campos obrigatórios e o submete, o sistema salva o novo projeto e o redireciona para a página de visualização do projeto, que mostra os dados conforme foram preenchidos |
+| TA03.12 | Um usuário _Coordenador_ preenche o formulário de cadastro de projetos com todos os campos obrigatórios e opcionais, e o submete, o sistema salva o novo projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos |
+| TA03.13 | Um usuário _Coordenador_ não preenche todos os campos obrigatórios do formulário de cadastro de projetos e o submete, o sistema exibe a mensagem de erro "Há campos obrigatórios não preenchidos" |
+| TA03.14 | Um usuário _Administrador_ preenche o formulário de cadastro de projetos com todos os campos obrigatórios e o submete, o sistema salva o novo projeto e o redireciona para a página de visualização do projeto, que mostra os dados conforme foram preenchidos |
+| TA03.15 | Um usuário _Administrador_ preenche o formulário de cadastro de projetos com todos os campos obrigatórios e opcionais, e o submete, o sistema salva o novo projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos |
+| TA03.16 | Um usuário _Administrador_ não preenche todos os campos obrigatórios do formulário de cadastro de projetos e o submete, o sistema exibe a mensagem de erro "Há campos obrigatórios não preenchidos" |
+| TA03.17 | Um usuário não logado tenta editar um projeto e não consegue, o sistema exibe a mensagem "Você precisa fazer login para editar projetos" |
+| TA03.18 | Um usuário _Membro_ logado tenta editar um projeto e não consegue, o sistema exibe a mensagem "Você não possui permissão para editar projetos" |
+| TA03.19 | Um usuário _Coordenador_ logado tenta editar um projeto do qual não faz parte e não consegue, o sistema exibe a mensagem "Você não possui permissão para editar esse projeto" |
+| TA03.20 | Um usuário _Coordenador_ logado tenta editar um projeto do qual faz parte e é direcionado para um formulário com os campos **Nome**, **Descrição** (opcional), **Situação**, **Data de início**, **Data de término**, **Equipe** e **Fluxo** preenchidos com os dados salvos no banco |
+| TA03.21 | Um usuário _Coordenador_ preenche o formulário de edição de projeto, modificando todos os campos obrigatórios, deixando os campos opcionais em branco, e o submete, o sistema salva o projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos e a mensagem "Alterações salvas" |
+| TA03.22 | Um usuário _Coordenador_ preenche o formulário de edição de projeto, modificando todos os campos obrigatórios e opcionais, e o submete, o sistema salva o projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos e a mensagem "Alterações salvas" |
+| TA03.23 | Um usuário _Coordenador_ preenche o formulário de edição de projeto, deixando campos obrigatórios em branco, e o submete, o sistema exibe a mensagem "Há campos obrigatórios não preenchidos" |
+| TA03.24 | Um usuário _Administrador_ logado tenta editar um projeto do qual não faz parte e consegue, o sistema o redireciona para um formulário com os campos **Nome**, **Descrição** (opcional), **Situação**, **Data de início**, **Data de término**, **Equipe** e **Fluxo** preenchidos com os dados salvos no banco |
+| TA03.25 | Um usuário _Administrador_ logado tenta editar um projeto do qual faz parte e é direcionado para um formulário com os campos **Nome**, **Descrição** (opcional), **Situação**, **Data de início**, **Data de término**, **Equipe** e **Fluxo** preenchidos com os dados salvos no banco |
+| TA03.26 | Um usuário _Administrador_ preenche o formulário de edição de projeto, modificando todos os campos obrigatórios, deixando os campos opcionais em branco, e o submete, o sistema salva o projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos e a mensagem "Alterações salvas" |
+| TA03.27 | Um usuário _Administrador_ preenche o formulário de edição de projeto, modificando todos os campos obrigatórios e opcionais, e o submete, o sistema salva o projeto e o redireciona para a página de visualização, que mostra os dados conforme foram preenchidos e a mensagem "Alterações salvas" |
+| TA03.28 | Um usuário _Administrador_ preenche o formulário de edição de projeto, deixando campos obrigatórios em branco, e o submete, o sistema exibe a mensagem "Há campos obrigatórios não preenchidos" |
+| TA03.29 | Um usuário não logado tenta excluir um projeto e não consegue, o sistema exibe a mensagem "Você precisa fazer login para excluir projetos" |
+| TA03.30 | Um usuário _Membro_ logado tenta excluir um projeto e não consegue, o sistema exibe a mensagem "Você não possui permissão para excluir projetos" |
+| TA03.31 | Um usuário _Coordenador_ logado tenta excluir um projeto e não consegue, o sistema exibe a mensagem "Você não possui permissão para excluir projetos" |
+| TA03.32 | Um usuário _Administrador_ logado tenta excluir um projeto e o sistema exibe um forulário com botões para confirmar ou cancelar a operação, o usuário confirma a operação, o sistema exclui o registro, o redireciona para a página inicial e exibe a mensagem "Projeto excluido" |
+| TA03.33 | Um usuário _Administrador_ logado tenta excluir um projeto e o sistema exibe um forulário com botões para confirmar ou cancelar a operação, o usuário cancela a operação e o sistema mantém o registro |
 
 ## User Story US03 - Manter Fluxo de desenvolvimento
 
