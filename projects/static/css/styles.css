@@ -102,10 +102,11 @@
 .project_add_form p {
     display: flex;
     flex-direction: column;
+
 }
 
 .project_add_form p input, textarea, select {
-    border: 1px solid grey;
+    border: 1px solid #42ACF0;
     outline: none;
     text-indent: 5px;
     padding-top: 5px;

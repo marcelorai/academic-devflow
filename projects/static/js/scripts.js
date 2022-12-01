@@ -19,7 +19,9 @@ const filterProjects = () => {
 const check_checkboxes = () => { 
     const get_all_checkboxes = document.querySelectorAll('[name="codigo"]')
     const get_delete_project_button = document.getElementById('delete_project_button')
+    const get_edit_project_button = document.getElementById('edit_project_button')
     const get_trash_icon = document.getElementById('trash_icon')
+    const get_edit_icon = document.getElementById('edit_icon')
 
     let cont = 0
     get_all_checkboxes.forEach(element => {
@@ -30,14 +32,19 @@ const check_checkboxes = () => {
     
     if(cont == 1){
         get_delete_project_button.disabled = false
+        get_edit_project_button.disabled = false
         get_trash_icon.style.color = "red"
+        get_edit_icon.style.color = "green"
     } else {
         get_delete_project_button.disabled = true
+        get_edit_project_button.disabled = true
         get_trash_icon.style.color = "grey"
+        get_edit_icon.style.color = "grey"
+
     }
 }
 
-const return_project_to_be_deleted = () => {
+const return_selected_project = () => {
     const get_all_checkboxes = document.querySelectorAll('[name="codigo"]')
     let id = 0
     get_all_checkboxes.forEach(element => {
@@ -50,10 +57,15 @@ const return_project_to_be_deleted = () => {
 }
 
 const delete_project = () => {
-    const project_to_be_deleted = return_project_to_be_deleted()
+    const project_to_be_deleted = return_selected_project()
     window.location.href = `${project_to_be_deleted}/excluir`
 
 }
 
+const edit_project = () => {
+    const project_to_be_edited = return_selected_project()
+    window.location.href = `${project_to_be_edited}/editar`
+
+}
 
 
