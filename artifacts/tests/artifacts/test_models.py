@@ -15,3 +15,11 @@ class ArtefatoModel(TestCase):
                                     situacao=self.SITUACAO, data_entrega=self.DATA_ENTREGA)
         self.assertTrue(isinstance(a, Artefato))
         self.assertEqual(a.nome, self.NOME)
+
+    def test_objeto_criado_campos_obrigatorios(self):
+        """O modelo cria corretamente o objeto quando apenas os atributos obrigatórios são fornecidos"""
+
+        a = Artefato.objects.create(nome=self.NOME, situacao=self.SITUACAO,
+                                    data_entrega=self.DATA_ENTREGA)
+        self.assertTrue(isinstance(a, Artefato))
+        self.assertEqual(a.nome, self.NOME)
