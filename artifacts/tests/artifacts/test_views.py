@@ -1,15 +1,16 @@
 from django.test import Client, TestCase
 from django.urls import reverse_lazy
+from artifacts.models import Artefato
 
 
 class CreateArtifactView(TestCase):
     def setUp(self):
         self.client = Client()
         self.targetUrl = reverse_lazy('artifacts:registrar')
-        self.testValues = {
+        self.test_values = {
             "nome": "Modelo de dados",
             "descricao": "Modelo de dados conceitual",
-            "data_entrega": "2023-01-01",
+            "data-entrega": "2023-01-01",
             "situacao": "Em andamento"
         }
 
@@ -20,3 +21,11 @@ class CreateArtifactView(TestCase):
         self.assertIsNotNone(
             response.context, "Não foi usado contexto na renderização")
         self.assertIsNotNone(response.context.get('form'), "'form' não existe")
+
+    def test_post_request_todos_campos_cria_objeto(self):
+        """Verifica se a view cria um Artefato quando todos os campos são passados em request post"""
+
+        initial_count = Artefato.objects.count()
+        self.client.post(self.targetUrl, self.test_values)
+        current_count = Artefato.objects.count()
+        self.assertEqual(current_count, initial_count+1)
