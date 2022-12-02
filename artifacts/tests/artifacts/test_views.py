@@ -29,3 +29,16 @@ class CreateArtifactView(TestCase):
         self.client.post(self.targetUrl, self.test_values)
         current_count = Artefato.objects.count()
         self.assertEqual(current_count, initial_count+1)
+
+    def test_post_request_campos_obrigatorios_cria_objeto(self):
+        """Verifica se a view cria um Artefato quando os campos obrigatórios são passados em request post"""
+
+        initial_count = Artefato.objects.count()
+        request_data = {
+            "nome": self.test_values['nome'],
+            "data-entrega": self.test_values['data-entrega'],
+            "situacao": self.test_values['situacao']
+        }
+        self.client.post(self.targetUrl, request_data)
+        current_count = Artefato.objects.count()
+        self.assertEqual(current_count, initial_count+1)
