@@ -1,17 +1,21 @@
 from django.test import Client, TestCase
 from django.urls import reverse_lazy
 from artifacts.models import Artefato
+from projects.models import Projeto
 
 
 class CreateArtifactView(TestCase):
     def setUp(self):
         self.client = Client()
         self.targetUrl = reverse_lazy('artifacts:registrar')
+        self.projeto = Projeto.objects.create(
+            nome="Projeto teste", data_inicio='2022-01-01', data_termino='2022-12-31', situacao="Iniciado")
         self.test_values = {
             "nome": "Modelo de dados",
             "descricao": "Modelo de dados conceitual",
             "data_entrega": "2023-01-01",
-            "situacao": "Em andamento"
+            "situacao": "Em andamento",
+            "projeto": self.projeto.id
         }
 
     def test_get_request_retorna_form(self):
@@ -37,7 +41,8 @@ class CreateArtifactView(TestCase):
         request_data = {
             "nome": self.test_values['nome'],
             "data_entrega": self.test_values['data_entrega'],
-            "situacao": self.test_values['situacao']
+            "situacao": self.test_values['situacao'],
+            "projeto": self.projeto.id
         }
         self.client.post(self.targetUrl, request_data)
         current_count = Artefato.objects.count()
@@ -49,7 +54,8 @@ class CreateArtifactView(TestCase):
         initial_count = Artefato.objects.count()
         request_data = {
             "data_entrega": self.test_values['data_entrega'],
-            "situacao": self.test_values['situacao']
+            "situacao": self.test_values['situacao'],
+            "projeto": self.projeto.id
         }
         self.client.post(self.targetUrl, request_data)
         current_count = Artefato.objects.count()
@@ -62,7 +68,8 @@ class CreateArtifactView(TestCase):
         initial_count = Artefato.objects.count()
         request_data = {
             "nome": self.test_values['nome'],
-            "situacao": self.test_values['situacao']
+            "situacao": self.test_values['situacao'],
+            "projeto": self.projeto.id
         }
         self.client.post(self.targetUrl, request_data)
         current_count = Artefato.objects.count()
@@ -76,6 +83,7 @@ class CreateArtifactView(TestCase):
         request_data = {
             "nome": self.test_values['nome'],
             "data_entrega": self.test_values['data_entrega'],
+            "projeto": self.projeto.id
         }
         self.client.post(self.targetUrl, request_data)
         current_count = Artefato.objects.count()
