@@ -13,7 +13,7 @@ class CreateArtifactView(TestCase):
             "situacao": "Em andamento"
         }
 
-    def test_get_request_returns_form(self):
+    def test_get_request_retorna_form(self):
         """Verifica se a view exibe o formulário de criacao de artefato em request get"""
 
         response = self.client.get(self.targetUrl)
