@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
-# Create your views here.
+
+def create_artifact_view(request):
+    return HttpResponse("<h1>Criar artefato</h1>")
