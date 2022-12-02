@@ -42,3 +42,42 @@ class CreateArtifactView(TestCase):
         self.client.post(self.targetUrl, request_data)
         current_count = Artefato.objects.count()
         self.assertEqual(current_count, initial_count+1)
+
+    def test_post_request_nome_ausente_nao_cria_objeto(self):
+        """Verifica se a view não cria um Artefato quando o nome não é passado"""
+
+        initial_count = Artefato.objects.count()
+        request_data = {
+            "data-entrega": self.test_values['data-entrega'],
+            "situacao": self.test_values['situacao']
+        }
+        self.client.post(self.targetUrl, request_data)
+        current_count = Artefato.objects.count()
+        self.assertEqual(current_count, initial_count,
+                         "Permite criar Artefato sem nome")
+
+    def test_post_request_data_entrega_ausente_nao_cria_objeto(self):
+        """Verifica se a view não cria um Artefato quando a data de entrega não é passada"""
+
+        initial_count = Artefato.objects.count()
+        request_data = {
+            "nome": self.test_values['nome'],
+            "situacao": self.test_values['situacao']
+        }
+        self.client.post(self.targetUrl, request_data)
+        current_count = Artefato.objects.count()
+        self.assertEqual(current_count, initial_count,
+                         "Permite criar Artefato sem data de entrega")
+
+    def test_post_request_situacao_ausente_nao_cria_objeto(self):
+        """Verifica se a view não cria um Artefato quando a situação não é passada"""
+
+        initial_count = Artefato.objects.count()
+        request_data = {
+            "nome": self.test_values['nome'],
+            "data-entrega": self.test_values['data-entrega'],
+        }
+        self.client.post(self.targetUrl, request_data)
+        current_count = Artefato.objects.count()
+        self.assertEqual(current_count, initial_count,
+                         "Permite criar Artefato sem situação")
