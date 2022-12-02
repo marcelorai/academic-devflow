@@ -8,5 +8,5 @@ def create_artifact_view(request):
         form = ArtefatoCreateForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('projects:listar')
     return render(request, 'artifacts/novo-artefato.html', {'form': form})
