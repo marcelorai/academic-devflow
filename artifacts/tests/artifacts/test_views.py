@@ -10,7 +10,7 @@ class CreateArtifactView(TestCase):
         self.test_values = {
             "nome": "Modelo de dados",
             "descricao": "Modelo de dados conceitual",
-            "data-entrega": "2023-01-01",
+            "data_entrega": "2023-01-01",
             "situacao": "Em andamento"
         }
 
@@ -36,7 +36,7 @@ class CreateArtifactView(TestCase):
         initial_count = Artefato.objects.count()
         request_data = {
             "nome": self.test_values['nome'],
-            "data-entrega": self.test_values['data-entrega'],
+            "data_entrega": self.test_values['data_entrega'],
             "situacao": self.test_values['situacao']
         }
         self.client.post(self.targetUrl, request_data)
@@ -48,7 +48,7 @@ class CreateArtifactView(TestCase):
 
         initial_count = Artefato.objects.count()
         request_data = {
-            "data-entrega": self.test_values['data-entrega'],
+            "data_entrega": self.test_values['data_entrega'],
             "situacao": self.test_values['situacao']
         }
         self.client.post(self.targetUrl, request_data)
@@ -75,7 +75,7 @@ class CreateArtifactView(TestCase):
         initial_count = Artefato.objects.count()
         request_data = {
             "nome": self.test_values['nome'],
-            "data-entrega": self.test_values['data-entrega'],
+            "data_entrega": self.test_values['data_entrega'],
         }
         self.client.post(self.targetUrl, request_data)
         current_count = Artefato.objects.count()
