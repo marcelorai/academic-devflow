@@ -110,3 +110,8 @@ class test_artifact_filtering_views(TestCase):
         )
 
         self.register_url = reverse_lazy('artifacts:listar')
+
+    def test_request(self):
+        """Verifica se a requisição retornou com status 200"""
+        response = self.client.get(self.list_url)
+        self.assertEquals(response.status_code,200)
