@@ -109,9 +109,14 @@ class test_artifact_filtering_views(TestCase):
             projeto = self.ProjetoTest.pk
         )
 
-        self.register_url = reverse_lazy('artifacts:listar')
+        self.list_url = reverse_lazy('artifacts:listar')
 
     def test_request(self):
         """Verifica se a requisição retornou com status 200"""
         response = self.client.get(self.list_url)
         self.assertEquals(response.status_code,200)
+
+    def test_amount_of_existing_objects(self):
+        """Verifica a quantidade objetos existentes"""
+        objetos = Artefato.objects.all()
+        self.assertEquals(len(objetos),0)
