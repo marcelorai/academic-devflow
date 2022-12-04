@@ -176,3 +176,18 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | TA05.21 | Um usuário administrador deseja excluir uma etapa de um fluxo de projeto. O etapa ainda não iniciou. O sistema permite a exclusão, mostrando uma caixa de confirmação. O usuário confirma a exclusão. O sistema exclui a etapa. |
 | TA05.22 | Um usuário administrador deseja excluir uma etapa de um fluxo de projeto, mas ela já iniciou. O sistema impede a exclusão. |
 | TA05.23 | Um usuário administrador deseja adicionar uma etapa a um fluxo de projeto. O sistema permite a criação, mostrando um formulário com os campos nome, descrição (opcional), data de início, data de finalização, usar gameficação, e posicao da etapa no fluxo. O usuário preenche todos os campos obrigatórios. O usuário submete o formulário. O sistema cria a etapa. |
+
+## User Story US05 - Manter Iteração
+
+|     |     |
+| --- | --- |
+| **Descrição** | O sistema deve permitir o cadastro, visualização, edição e exclusão das iterações. Uma iteração tem código, data de início, data de término e uma descrição. As informações referentes a iteração pode ser manipuladas pelos coordenadores e  também pelos membros responsáveis pelo desenvolvimento do projeto.Todas as operações demandam que o usuário esteja logado. |
+| **Requisitos envolvidos** | RF01, RF02, RF11, RNF1, RNF2, RNF3 | 
+| **Prioridade** | Importante |
+| **Estimativa** | 10h |
+| **Tempo gasto (real)** | - |
+| **Tamanho funcional** | - |
+| **Analista** | Joan de Azevedo Medeiros |
+| **Desenvolvedor** | - |
+| **Revisor** | - |
+| **Testador** | - |
