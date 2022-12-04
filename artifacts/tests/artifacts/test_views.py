@@ -89,3 +89,24 @@ class CreateArtifactView(TestCase):
         current_count = Artefato.objects.count()
         self.assertEqual(current_count, initial_count,
                          "Permite criar Artefato sem situação")
+
+class test_artifact_filtering_views(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+        self.ProjetoTest = Projeto.objects.create(
+            nome="Projeto teste", 
+            data_inicio='2022-01-01', 
+            data_termino='2022-12-31', 
+            situacao="Iniciado"
+        )
+
+        self.ArtifactTest = Artefato.objects.create(
+            nome = 'Artefato teste',
+            descricao = 'Descrição teste',
+            data_entrega = '2010-10-10',
+            situacao = 'Em andamento',
+            projeto = self.ProjetoTest.pk
+        )
+
+        self.register_url = reverse_lazy('artifacts:listar')
