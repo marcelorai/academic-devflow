@@ -4,7 +4,14 @@ from django.shortcuts import render, redirect
 from .forms import ProjectForm
 
 def home_project(request):
-    return render(request, 'projects/home.html')
+
+    name = request.GET.get('nome', None)
+
+    if name:
+        projects = Projeto.objects.filter(nome__contains=name)
+        return render(request, 'projects/home.html', {'projects': projects})
+    else:
+        return render(request, 'projects/home.html')
 
 def new_project(request):  
     if (request.method == 'POST'):
@@ -43,6 +50,10 @@ def delete_project(request, pk):
 
     return redirect('/projetos/listar')
 
+def search_by_name(request):
+    name = request.GET.get('name', None)
+    projects = Projeto.objects.filter(nome__contains=name)
+    return render(request, 'projects/filter_project.html', {'projects': projects})
 
 class ProjetoUpdateView(UpdateView):
     model = Projeto
