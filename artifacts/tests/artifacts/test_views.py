@@ -90,6 +90,57 @@ class CreateArtifactView(TestCase):
         self.assertEqual(current_count, initial_count,
                          "Permite criar Artefato sem situação")
 
+class test_artifact_filtering_views(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+        self.ProjetoTest = Projeto.objects.create(
+            nome="Projeto teste", 
+            data_inicio='2022-01-01', 
+            data_termino='2022-12-31', 
+            situacao="Iniciado"
+        )
+
+        self.data = {
+            "nome": "Artefato teste",
+            "descricao": "Artefato teste",
+            "data_entrega": "2023-01-01",
+            "situacao": "Em andamento",
+            "projeto": self.ProjetoTest.id
+        }
+
+        self.register_url = reverse_lazy('artifacts:registrar')
+        self.list_url = reverse_lazy('artifacts:listar')
+
+
+
+    def test_request(self):
+        """Verifica se a requisição retornou com status 200"""
+        response = self.client.get(self.list_url)
+        self.assertEquals(response.status_code,200)
+
+    def test_amount_of_existing_objects(self):
+        """Verifica a quantidade de objetos existentes"""
+        self.client.post(self.register_url, self.data)
+        objetos = Artefato.objects.all()
+        self.assertEquals(len(objetos),1)
+
+    def test_filter_by_name(self):
+        """Verifica se a filtragem por nome funciona"""
+        
+        self.client.post(self.register_url, self.data)
+
+        response = self.client.get(reverse_lazy("artifacts:home"), nome='Artefato teste')
+        self.assertEquals(response.status_code, 200)
+    
+    def test_render(self):
+        """Veririca se os artefatos foram renderizados na tela"""
+        self.client.post(self.register_url, self.data)
+        
+        response = self.client.get(reverse_lazy("artifacts:home"),{'nome': 'Artefato'})
+        self.assertContains(response, ' <td>Artefato teste</td>')
+        self.assertTrue('artifacts' in response.context)
+      
 class DeleteArtifactView(TestCase):
 
         def setUp(self):

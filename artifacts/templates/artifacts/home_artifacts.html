@@ -1,0 +1,74 @@
+{% extends 'base.html' %} 
+
+{% block title %} Artefatos {% endblock %} 
+
+{% block content %}
+
+<div class="home_project" id="home_project">
+    <h1> Artefatos </h1>
+    
+    <div class="group_buttons">
+        <a 
+            href="registrar" 
+            target="_blank" 
+            rel="noopener noreferrer">
+            Adicionar
+        </a>
+        <a 
+            type="button"
+            class="filter_project_button disabled" 
+            id="filter_project_button" 
+            name="filter_project_button" 
+            onclick="filterProjects()">
+            Filtrar
+        </a>
+        <a 
+            type="button"
+            class="button_to_list_all_projects" 
+            id="button_to_list_all_projects" 
+            name="button_to_list_all_projects" 
+            href="listar"
+            target="_blank">
+            Listar todos
+        </a>
+    </div>
+
+    <form class="filter_project_form" id="filter_project_form" method="GET">  
+        <input 
+            id="filter_artifact_input"
+            class="filter_project_input"
+            type="search" 
+            name="nome" 
+            placeholder="Nome do artefato"
+        >
+
+    </form>
+    {% if artifacts %}
+        <table class="table search_results_table" id="search_results_table">
+            <thead>
+                <tr>
+
+                    <th scope="col">Código</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Situação</th>
+                    <th scope="col">Data de entrega</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {% for artifact in artifacts %} 
+            
+                <tr>
+                    <th scope="row">{{artifact.id}}</th>
+                    <td>{{artifact.nome}}</td>
+                    <td>{{artifact.situacao}}</td>
+                    <td>{{artifact.data_entrega}}</td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</div>
+
+
+{% endblock %}
