@@ -101,15 +101,16 @@ class test_artifact_filtering_views(TestCase):
             situacao="Iniciado"
         )
 
-        self.ArtifactTest = Artefato.objects.create(
-            nome = 'Artefato teste',
-            descricao = 'Descrição teste',
-            data_entrega = '2010-10-10',
-            situacao = 'Em andamento',
-            projeto = self.ProjetoTest.pk
-        )
+        self.data = {
+            "nome": "Artefato teste",
+            "descricao": "Artefato teste",
+            "data_entrega": "2023-01-01",
+            "situacao": "Em andamento",
+            "projeto": self.ProjetoTest.id
+        }
 
         self.register_url = reverse_lazy('artifacts:registrar')
+        self.list_url = reverse_lazy('artifacts:listar')
 
 
 
@@ -119,14 +120,16 @@ class test_artifact_filtering_views(TestCase):
         self.assertEquals(response.status_code,200)
 
     def test_amount_of_existing_objects(self):
-        """Verifica a quantidade objetos existentes"""
-
-        response = self.client.post(self.register_url, self.ArtifactTest)
+        """Verifica a quantidade de objetos existentes"""
+        self.client.post(self.register_url, self.data)
         objetos = Artefato.objects.all()
-        self.assertEquals(len(objetos),0)
+        self.assertEquals(len(objetos),1)
 
-    def test_view_find_artifact_by_name(self):
-        response = self.client.post(self.register_url, self.ArtifactTest)
-        artifact = Artefato.objects.filter(nome=self.ArtifactTest.nome)
-        self.assertEquals(artifact.nome, "Artefato teste")
+    def test_filter_by_name(self):
+        """Verifica se a filtragem por nome funciona"""
         
+        self.client.post(self.register_url, self.data)
+
+        response = self.client.get(reverse_lazy("artifacts:home"), name='Artefato teste')
+        self.assertEquals(response.status_code, 200)
+
