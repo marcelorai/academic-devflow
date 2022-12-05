@@ -1,5 +1,5 @@
 from django.test import Client, TestCase
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from artifacts.models import Artefato
 from projects.models import Projeto
 
@@ -89,3 +89,16 @@ class CreateArtifactView(TestCase):
         current_count = Artefato.objects.count()
         self.assertEqual(current_count, initial_count,
                          "Permite criar Artefato sem situação")
+
+class DeleteArtifactView(TestCase):
+
+        def setUp(self):
+            self.client = Client()
+            self.projeto = Projeto.objects.create( nome="Projeto teste", data_inicio='2022-01-01', data_termino='2022-12-31', situacao="Iniciado")
+            self.artifact = Artefato.objects.create( nome="Projeto teste",data_entrega='2022-01-01', situacao="Iniciado", projeto =  self.projeto  )
+            self.response = self.client.delete(reverse_lazy('artifacts:delete_artifact',  kwargs={'pk': self.artifact.pk}))
+
+        def test_model_content(self):
+            self.assertEqual(self.artifact.nome, 'Projeto teste')
+            self.assertEqual(self.response.status_code, 302)
+            
