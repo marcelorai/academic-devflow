@@ -176,3 +176,34 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | TA05.21 | Um usuário administrador deseja excluir uma etapa de um fluxo de projeto. O etapa ainda não iniciou. O sistema permite a exclusão, mostrando uma caixa de confirmação. O usuário confirma a exclusão. O sistema exclui a etapa. |
 | TA05.22 | Um usuário administrador deseja excluir uma etapa de um fluxo de projeto, mas ela já iniciou. O sistema impede a exclusão. |
 | TA05.23 | Um usuário administrador deseja adicionar uma etapa a um fluxo de projeto. O sistema permite a criação, mostrando um formulário com os campos nome, descrição (opcional), data de início, data de finalização, usar gameficação, e posicao da etapa no fluxo. O usuário preenche todos os campos obrigatórios. O usuário submete o formulário. O sistema cria a etapa. |
+
+## User Story US06 - Manter Iteração
+
+|     |     |
+| --- | --- |
+| **Descrição** | O sistema deve permitir o cadastro, visualização, edição e exclusão das iterações. Uma iteração tem código, data de início, data de término e uma descrição. As informações referentes a iteração pode ser manipuladas pelos coordenadores e  também pelos membros responsáveis pelo desenvolvimento do projeto.Todas as operações demandam que o usuário esteja logado. |
+| **Requisitos envolvidos** | RF01, RF02, RF11, RNF1, RNF2, RNF3 | 
+| **Prioridade** | Importante |
+| **Estimativa** | 10h |
+| **Tempo gasto (real)** | - |
+| **Tamanho funcional** | - |
+| **Analista** | Joan de Azevedo Medeiros |
+| **Desenvolvedor** | - |
+| **Revisor** | - |
+| **Testador** | - |
+
+### US05 - Testes de aceitação (TA)
+
+| Código  | Descrição |
+| ------- | --------- |
+| TA06.01 | Um usuário deseja visualizar uma das iterações do projeto. O usuário não está logado. O sistema o redireciona para a tela de login. |
+| TA06.02 | Um usuário deseja editar uma das iterações do projeto. O usuário não está logado. O sistema o redireciona para a tela de login. |
+| TA06.03 | Um usuário deseja excluir uma das iterações do projeto. O usuário não está logado. O sistema o redireciona para a tela de login. |
+| TA06.04 | Um usuário deseja adicionar uma nova iteração ao projeto. O usuário não está logado. O sistema o redireciona para a tela de login. |
+| TA06.05 | Um usuário deseja cadastrar uma nova iteração. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário clica no botão "Nova Iteração". O sistema direciona o usuário para uma tela contendo um formulário. O usuário preenche corretamente as informações do formulário de registro de uma nova iteração e clica no botão salvar. O sistema deve informar ao usuário que a operação foi concluída com sucesso e direcioná-lo para a tela de iterações. |
+| TA06.06 | Um usuário deseja cadastrar uma nova iteração. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário clica no botão "Nova Iteração". O sistema direciona o usuário para uma tela contendo um formulário. O usuário preenche incorretamente as informações do formulário e clica no botão "Salvar". O sistema deve informar ao usuário que o formulário foi preenchido incorretamente, além de informar quais campos foram preenchidos incorretamente. |
+| TA06.07  | Um usuário deseja visualizar um iteração. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário identifica a iteração que deseja visualizar e a seleciona. O sistema deve exibir uma interface contendo o nome da iteração, a data de início e fim, e a sua descrição. Além disso, deve ser mostrado quantas atividades estão vinculados a esta iteração, assim como a quantidade de artefatos. |
+| TA06.08 | Um usuário deseja editar as informações de uma iteração. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário identifica a iteração que deseja editar e a seleciona. O sistema deve exibir uma interface contendo as informações da iteração e um botão de editar. Ao clicar no botão editar, o sistema direciona o usuário para uma tela contendo um formulário preenchido com as informações atuais da iteração. O usuário preenche corretamente as informações que deseja alterar e clica no botão salvar. O sistema deve informar ao usuário que a operação foi concluída com sucesso e direcioná-lo para a tela de iterações. |
+| TA06.09 | Um usuário deseja editar as informações de uma iteração. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário identifica a iteração que deseja editar e a seleciona. O sistema deve exibir uma interface contendo as informações da iteração e um botão de editar. Ao clicar no botão editar, o sistema direciona o usuário para uma tela contendo um formulário preenchido com as informações atuais da iteração. O usuário preenche incorretamente as informações que deseja alterar e clica no botão salvar. O sistema deve informar ao usuário que o formulário foi preenchido incorretamente, além de informar quais campos foram preenchidos incorretamente. |
+| TA06.10 | Um usuário deseja excluir uma iteração que já se encontra em andamento. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário identifica a iteração que deseja excluir e a seleciona. O sistema deve exibir uma interface contendo as informações da iteração e um botão de excluir. O usuário clica no botão "excluir". O sistema deve informar que a iteração encontra-se em andamento e informar que não é possível a exclusão da iteração. |
+| TA06.11 | Um usuário deseja excluir uma iteração que ainda não começou e ainda não possui nem atividades e nem artefatos. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário identifica a iteração que deseja excluir e a seleciona. O sistema deve exibir uma interface contendo as informações da iteração e um botão de excluir. O usuário clica no botão "excluir". O sistema deve informar ao usuário que a operação foi concluída com sucesso e direcioná-lo para a tela de iterações. |
