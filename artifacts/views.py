@@ -17,6 +17,6 @@ def artifact_list(request):
     return render(request, 'artifacts/list_all_artifacts.html', {'artifacts': artifacts})
 
 def filter_artifact_by_name(request):
-    name = request.GET.get('name')
+    name = request.GET.get('nome')
     artifacts = Artefato.objects.filter(nome=name)
     return render(request, 'artifacts/home_artifacts.html', {'artifacts': artifacts})
