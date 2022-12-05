@@ -130,6 +130,15 @@ class test_artifact_filtering_views(TestCase):
         
         self.client.post(self.register_url, self.data)
 
-        response = self.client.get(reverse_lazy("artifacts:home"), name='Artefato teste')
+        response = self.client.get(reverse_lazy("artifacts:home"), nome='Artefato teste')
         self.assertEquals(response.status_code, 200)
+    
+    def test_render(self):
+        """Veririca se os artefatos foram renderizados na tela"""
+        self.client.post(self.register_url, self.data)
+        response = self.client.get(reverse_lazy("artifacts:home"), nome='Artefato teste')
+        self.assertContains(response, '<li>Artefato teste</li>')
+
+      
+    
 
