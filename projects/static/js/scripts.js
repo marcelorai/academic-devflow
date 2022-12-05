@@ -69,5 +69,7 @@ const edit_project = () => {
 }
 
 const get_filter_project_input = document.getElementById('filter_project_input')
+const get_filter_artifact_input = document.getElementById('filter_artifact_input')
 get_filter_project_input.onsubmit()
+get_filter_artifact_input.onsubmit()
         
