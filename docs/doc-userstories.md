@@ -230,6 +230,6 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | TA06.03 | Caso o usuário preencha alguns dos campos incorretamente durante o cadastro, deve ser exibida uma mensagem alertando qual campo foi preenchido incorretamente, além disso, os dados da tentativa fracassada não podem ser armazenados. |
 | TA06.04 | Na listagem de Artefato o responsável pelo projeto poderá alterar o artefato clicando em "Alterar", posteriormente ele deverá preencher qual ou quais campos ele deseja alterar. Quando realizada a alteração uma mesagem de sucesso deve ser exibida, confimando que a alteração foi realizada com sucesso. |
 | TA06.05 | O responsável pelo projeto durante a alteração do artefato preenche informações inválidas, ao clicar em "Salvar" deve ser exibida um mensagem de erro, alertando o usuário qual(is) campo(s) foi preenchido incorretamente. |
-| TA06.06 | O Artefato no momento em que responsável pelo projeto ao clicar em "deletar" deve ser excluido, e uma mesagem de sucesso deve ser exibida. 
+| TA06.06 | O Artefato no momento em que responsável pelo projeto ao clicar em "deletar" deve ser excluido, e uma mesagem de sucesso deve ser exibida. |
 
 
