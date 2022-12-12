@@ -211,13 +211,13 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 ### US06 - Manter Artefato
 
 |            |            |   |
-|------------|------------| - |
-|**descrição**            | - |
-|**Requisitos envolvidos**| - |
-|**Prioridade**           | - |
-|**Estimativa**           | - |
+|------------|------------|   |
+|**descrição**            | O sistema deve permitir que seja realizado o cadastro, leitura, update e delete de artefatos. Além disso, um artefato está associado a um projeto, etapa e iteraçao, possibilitando realizar o controle de qual projeto, etapa e iteração tal artefato pertence. Os artefatos ajudarão a dar suporte ao andamento do projeto, ajudando também no planejamento. |
+|**Requisitos envolvidos**| RF09, RF18 ,RF19 |
+|**Prioridade**           | importante |
+|**Estimativa**           | 10h |
 |**Tempo gasto (real)**   | - |
-|**Tamanho Funcional**    | - |
-|**Analista**             | - |
-| **Revisor**             | - |
-| **Testador**            | - |
+|**Tamanho Funcional**    | 7 |
+|**Analista**             | Guilherme Angelo de Medeiros |
+| **Revisor**             | Joan de Azevedo Medeiros |
+| **Testador**            | Adriel Faria dos Santos |
