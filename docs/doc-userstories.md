@@ -210,14 +210,14 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 
 ### US06 - Manter Artefato
 
-|            |            |   
-|------------|------------| 
-|**desceição**            | 
-|**Requisitos envolvidos**| 
-|**Prioridade**           | 
-|**Estimativa**           | 
-|**Tempo gasto (real)**   | 
-|**Tamanho Funcional**    | 
-|**Analista**             |
-| **Revisor**             | 
-| **Testador**            |
+|            |            |   |
+|------------|------------| - |
+|**descrição**            | - |
+|**Requisitos envolvidos**| - |
+|**Prioridade**           | - |
+|**Estimativa**           | - |
+|**Tempo gasto (real)**   | - |
+|**Tamanho Funcional**    | - |
+|**Analista**             | - |
+| **Revisor**             | - |
+| **Testador**            | - |
