@@ -223,5 +223,13 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Testador**            | Adriel Faria dos Santos |
 
 ### US06 - Testes de Aceitação (TA)
+| Código | Descrição |
+|-----|-----|
+| TA06.01 | O usuário informa na tela as informações necessárias ao cadastro do artefato, ao clicar no botão salvar os dados deve ser exibida uma mensagem de confirmação.|
+| TA06.02 | Ao clicar em "listar artefato", Todos os artefatos que ainda não foram entregues devem ser exibidos, assim também como os recém cadastrados.
+| TA06.03 | Caso o usuário preencha alguns dos campos incorretamente durante o cadastro, deve ser exibida uma mensagem alertando qual campo foi preenchido incorretamente, além disso, os dados da tentativa fracassada não podem ser armazenados. |
+| TA06.04 | Na listagem de Artefato o responsável pelo projeto poderá alterar o artefato clicando em "Alterar", posteriormente ele deverá preencher qual ou quais campos ele deseja alterar. Quando realizada a alteração uma mesagem de sucesso deve ser exibida, confimando que a alteração foi realizada com sucesso. |
+| TA06.05 | O responsável pelo projeto durante a alteração do artefato preenche informações inválidas, ao clicar em "Salvar" deve ser exibida um mensagem de erro, alertando o usuário qual(is) campo(s) foi preenchido incorretamente. |
+| TA06.06 | O Artefato no momento em que responsável pelo projeto ao clicar em "deletar" deve ser excluido, e uma mesagem de sucesso deve ser exibida. 
 
 
