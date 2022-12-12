@@ -207,3 +207,17 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | TA06.09 | Um usuário deseja editar as informações de uma iteração. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário identifica a iteração que deseja editar e a seleciona. O sistema deve exibir uma interface contendo as informações da iteração e um botão de editar. Ao clicar no botão editar, o sistema direciona o usuário para uma tela contendo um formulário preenchido com as informações atuais da iteração. O usuário preenche incorretamente as informações que deseja alterar e clica no botão salvar. O sistema deve informar ao usuário que o formulário foi preenchido incorretamente, além de informar quais campos foram preenchidos incorretamente. |
 | TA06.10 | Um usuário deseja excluir uma iteração que já se encontra em andamento. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário identifica a iteração que deseja excluir e a seleciona. O sistema deve exibir uma interface contendo as informações da iteração e um botão de excluir. O usuário clica no botão "excluir". O sistema deve informar que a iteração encontra-se em andamento e informar que não é possível a exclusão da iteração. |
 | TA06.11 | Um usuário deseja excluir uma iteração que ainda não começou e ainda não possui nem atividades e nem artefatos. O usuário está logado. O usuário deve então clicar na opção "Iteração" disponível no menu. Após isso, o usuário deve ser direcionado para a tela de iterações existentes do projeto. O usuário identifica a iteração que deseja excluir e a seleciona. O sistema deve exibir uma interface contendo as informações da iteração e um botão de excluir. O usuário clica no botão "excluir". O sistema deve informar ao usuário que a operação foi concluída com sucesso e direcioná-lo para a tela de iterações. |
+
+### US06 - Manter Artefato
+
+|            |            |   
+|------------|------------| - |
+|**desceição**            | - |
+|**Requisitos envolvidos**| - |
+|**Prioridade**           | - |
+|**Estimativa**           | - |
+|**Tempo gasto (real)**   | - |
+|**Tamanho Funcional**    | - |
+|**Analista**             | - |
+| **Revisor**             | - |
+| **Testador**            | - |
