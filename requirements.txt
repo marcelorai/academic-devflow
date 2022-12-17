@@ -8,4 +8,6 @@ coverage==6.5.0
 # Icones da aplicação 
 fontawesomefree==6.2.1
 
-
+# Selenium
+webdriver-manager==3.8.5
+selenium==4.7.2
