@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Fluxo "{{ fluxo.nome }}"{% endblock %}
+
+{% block content %}
+<div class="container mx-auto">
+  <div class="row g-2">
+    <div class="col-12">
+      <h2>{{ fluxo.nome }}</h2>
+      <p>{{ fluxo.descricao }}</p>
+    </div>
+    <div class="col-12">
+      <div class="d-flex justify-content-between align-items-center">
+        <h4>Etapas</h4>
+        <a href="#" class="btn btn-primary">Adicionar etapa</a>
+      </div>
+      <div class="row g-2">
+        {% for etapa in fluxo.etapa_set.all %}
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">{{ etapa.nome }}</h4>
+              <p class="card-text">{{ etapa.descricao }}</p>
+              <p class="card-text">{{ etapa.data_inicio }} - {{ etapa.data_finalizacao }}</p>
+              <p class="card-text">
+                {% if etapa.ativa %}
+                <span class="badge badge-success">Ativa</span>
+                {% endif %}
+                {% if etapa.gameficada %}
+                <span class="badge badge-primary">Gameficada</span>
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <div class="col">
+          <h4 class="text-center">Nenhuma etapa encontrada</h4>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
