@@ -18,7 +18,7 @@ class Etapa(models.Model):
     descricao = models.TextField(
         max_length=400, verbose_name='descrição', blank=True, null=True)
     data_inicio = models.DateField(verbose_name='data de início')
-    data_finalizacao = models.DateTimeField(
+    data_finalizacao = models.DateField(
         verbose_name='data de finalização', validators=[validate_date_is_today_or_after])
     ativa = models.BooleanField(default=False)
     gameficada = models.BooleanField(default=False)
