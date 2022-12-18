@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Fluxo
 
-# Create your views here.
+
+def pagina_inicial_view(request):
+    fluxos = Fluxo.objects.all()
+    return render(request, 'flows/fluxo/home.html', {'fluxos': fluxos})
