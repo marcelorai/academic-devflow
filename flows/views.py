@@ -50,3 +50,11 @@ def editar_etapa_view(request, fluxo_pk, pk):
             nova_etapa.save()
             return redirect('flows:detalhes_fluxo', pk=fluxo_pk)
     return render(request, 'flows/etapa/editar.html', {'form': form, 'etapa': etapa})
+
+
+def excluir_etapa_view(request, fluxo_pk, pk):
+    etapa = get_object_or_404(Etapa, id=pk)
+    if request.method == 'POST':
+        etapa.delete()
+        return redirect('flows:detalhes_fluxo', pk=fluxo_pk)
+    return render(request, 'flows/etapa/excluir.html', {'etapa': etapa})
