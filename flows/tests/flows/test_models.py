@@ -20,6 +20,11 @@ class FluxoModel(TestCase):
         self.assertIsInstance(fluxo, Fluxo)
         self.assertEqual(self.nome, fluxo.nome)
 
+    def test_representacao_string_do_modelo(self):
+        """A representação string do modelo retorna o nome"""
+        fluxo = Fluxo.objects.create(nome=self.nome, descricao=self.descricao)
+        self.assertEqual(str(fluxo), self.nome)
+
 
 class EtapaModel(TestCase):
     def setUp(self):
@@ -45,3 +50,9 @@ class EtapaModel(TestCase):
                                      data_finalizacao=self.data_finalizacao, ativa=self.ativa, gameficada=self.gameficada, fluxo=self.fluxo)
         self.assertIsInstance(etapa, Etapa)
         self.assertEqual(self.nome, etapa.nome)
+
+    def test_representacao_string_do_modelo(self):
+        """A representação string do modelo retorna o nome"""
+        etapa = Etapa.objects.create(numero=self.numero, nome=self.nome, descricao=self.descricao, data_inicio=self.data_inicio,
+                                     data_finalizacao=self.data_finalizacao, ativa=self.ativa, gameficada=self.gameficada, fluxo=self.fluxo)
+        self.assertEqual(str(etapa), self.nome)
