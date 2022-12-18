@@ -2,6 +2,7 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.urls import reverse_lazy
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.support.select import Select
 from webdriver_manager.firefox import GeckoDriverManager
@@ -30,7 +31,10 @@ class CreateProjectPage(StaticLiveServerTestCase):
                ).select_by_visible_text("Iniciado")
 
         # envia o formulario
-        self.driver.find_element(By.CSS_SELECTOR, "form button").click()
+        submitBtn = self.driver.find_element(By.CSS_SELECTOR, "form button")
+        submitBtn.send_keys(Keys.PAGE_DOWN)
+        submitBtn.send_keys(Keys.PAGE_DOWN)
+        submitBtn.click()
 
         url_redirecionamento = f"{self.live_server_url}{reverse_lazy('projects:inicio')}"
         self.assertEqual(self.driver.current_url, url_redirecionamento)
