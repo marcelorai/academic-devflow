@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Fluxo
-from .forms import CriarFluxoForm, CriarEtapaForm
+from django.shortcuts import get_object_or_404, redirect, render
+
+from .forms import AtualizarEtapaForm, CriarEtapaForm, CriarFluxoForm
+from .models import Etapa, Fluxo
 
 
 def pagina_inicial_view(request):
@@ -34,3 +35,18 @@ def adicionar_etapa_view(request, fluxo_pk):
             etapa.save()
             return redirect('flows:detalhes_fluxo', pk=fluxo.id)
     return render(request, 'flows/etapa/adicionar.html', {'form': form, 'fluxo': fluxo})
+
+
+def editar_etapa_view(request, fluxo_pk, pk):
+    etapa = get_object_or_404(Etapa, id=pk)
+    fluxo = get_object_or_404(Fluxo, id=fluxo_pk)
+    form = AtualizarEtapaForm(instance=etapa)
+    if request.method == 'POST':
+        form = AtualizarEtapaForm(request.POST)
+        if form.is_valid():
+            nova_etapa = form.save(commit=False)
+            nova_etapa.fluxo = fluxo
+            nova_etapa.id = etapa.id
+            nova_etapa.save()
+            return redirect('flows:detalhes_fluxo', pk=fluxo_pk)
+    return render(request, 'flows/etapa/editar.html', {'form': form, 'etapa': etapa})
