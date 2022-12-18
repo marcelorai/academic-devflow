@@ -4,5 +4,5 @@ from django.utils import timezone
 
 def validate_date_is_today_or_after(value):
     today = timezone.now().date()
-    if (today > value):
+    if (today > value.date()):
         raise ValidationError('A data é anterior a hoje')
