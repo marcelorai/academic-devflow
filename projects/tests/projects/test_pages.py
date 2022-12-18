@@ -11,7 +11,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 class CreateProjectPage(StaticLiveServerTestCase):
     def setUp(self):
         self.options = webdriver.FirefoxOptions()
-        self.options.add_argument('--headless')
+        self.options.headless = True
         self.driver = webdriver.Firefox(
             service=FirefoxService(GeckoDriverManager().install()), options=self.options)
         self.url = reverse_lazy('projects:registrar')
