@@ -31,6 +31,9 @@
                 {% endif %}
               </p>
             </div>
+            <div class="card-footer">
+              <a href="{% url 'flows:editar_etapa' fluxo_pk=fluxo.id pk=etapa.id %}" class="btn btn-primary">Editar</a>
+            </div>
           </div>
         </div>
         {% empty %}
