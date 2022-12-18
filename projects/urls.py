@@ -4,12 +4,10 @@ from projects.views import new_project, home_project, update_project, project_li
 app_name = 'projects'
 
 urlpatterns = [
-
-    path('', home_project),
+    path('', home_project, name='inicio'),
     path('registrar/', new_project, name='registrar'),
     path('listar/', project_list, name='listar'),
     path('filtrar/', search_by_name, name='filtrar'),
     path('listar/<int:pk>/editar', update_project, name='atualizar'),
     path('listar/<int:pk>/excluir', delete_project, name='excluir')
-
 ]

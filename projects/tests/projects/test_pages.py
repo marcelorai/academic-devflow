@@ -2,6 +2,7 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.urls import reverse_lazy
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.support.select import Select
 from webdriver_manager.firefox import GeckoDriverManager
@@ -9,13 +10,14 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 class CreateProjectPage(StaticLiveServerTestCase):
     def setUp(self):
+        self.options = webdriver.FirefoxOptions()
+        self.options.add_argument('--headless')
         self.driver = webdriver.Firefox(
-            service=FirefoxService(GeckoDriverManager().install()))
-        self.driver.implicitly_wait(10)
+            service=FirefoxService(GeckoDriverManager().install()), options=self.options)
         self.url = reverse_lazy('projects:registrar')
 
     def test_preenche_todos_os_campos_e_submete_com_sucesso(self):
-        self.driver.get(self.url)
+        self.driver.get(f"{self.live_server_url}{self.url}")
 
         # preenche os campos do formulario
         self.driver.find_element(By.NAME, 'nome').send_keys("Projeto 1")
@@ -29,7 +31,10 @@ class CreateProjectPage(StaticLiveServerTestCase):
                ).select_by_visible_text("Iniciado")
 
         # envia o formulario
-        self.driver.find_element(By.CSS_SELECTOR, "form button").click()
+        submitBtn = self.driver.find_element(By.CSS_SELECTOR, "form button")
+        submitBtn.send_keys(Keys.PAGE_DOWN)
+        submitBtn.send_keys(Keys.PAGE_DOWN)
+        submitBtn.click()
 
         url_redirecionamento = f"{self.live_server_url}{reverse_lazy('projects:inicio')}"
         self.assertEqual(self.driver.current_url, url_redirecionamento)
