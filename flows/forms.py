@@ -34,3 +34,12 @@ class CriarEtapaForm(forms.ModelForm):
         help_texts = {
             'numero': 'Posição da etapa dentro do fluxo'
         }
+
+
+class AtualizarEtapaForm(CriarEtapaForm):
+    def __init__(self, *args, **kwargs):
+        super(AtualizarEtapaForm, self).__init__(*args, **kwargs)
+        if self.instance.data_inicio:
+            self.initial['data_inicio'] = self.instance.data_inicio.isoformat()
+        if self.instance.data_finalizacao:
+            self.initial['data_finalizacao'] = self.instance.data_finalizacao.isoformat()
