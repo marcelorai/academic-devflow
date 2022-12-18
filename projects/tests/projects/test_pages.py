@@ -16,7 +16,7 @@ class CreateProjectPage(StaticLiveServerTestCase):
         self.url = reverse_lazy('projects:registrar')
 
     def test_preenche_todos_os_campos_e_submete_com_sucesso(self):
-        self.driver.get(self.url)
+        self.driver.get(f"{self.live_server_url}{self.url}")
 
         # preenche os campos do formulario
         self.driver.find_element(By.NAME, 'nome').send_keys("Projeto 1")
