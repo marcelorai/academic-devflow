@@ -26,3 +26,6 @@ class Etapa(models.Model):
 
     def __str__(self):
         return self.nome
+
+    class Meta:
+        ordering = ['numero', 'data_inicio']
