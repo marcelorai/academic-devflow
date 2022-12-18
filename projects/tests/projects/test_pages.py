@@ -9,9 +9,10 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 class CreateProjectPage(StaticLiveServerTestCase):
     def setUp(self):
+        self.options = webdriver.FirefoxOptions()
+        self.options.add_argument('--headless')
         self.driver = webdriver.Firefox(
-            service=FirefoxService(GeckoDriverManager().install()))
-        self.driver.implicitly_wait(10)
+            service=FirefoxService(GeckoDriverManager().install()), options=self.options)
         self.url = reverse_lazy('projects:registrar')
 
     def test_preenche_todos_os_campos_e_submete_com_sucesso(self):
