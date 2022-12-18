@@ -67,6 +67,16 @@ class AdicionarFluxoView(TestCase):
         current_count = Fluxo.objects.count()
         self.assertEqual(current_count, initial_count+1)
 
+    def test_post_de_dados_incompletos_nao_cria_objeto_fluxo(self):
+        """Post request com campos incompletos não cria um objeto do tipo Fluxo"""
+        data = {
+            'descricao': "Um novo fluxo"
+        }
+        initial_count = Fluxo.objects.count()
+        self.client.post(self.targetUrl, data)
+        current_count = Fluxo.objects.count()
+        self.assertEqual(current_count, initial_count)
+
     def test_post_redireciona_para_pagina_inicial(self):
         """Após a realização de um post request de sucesso a view redireciona a página inicial de fluxos"""
         data = {
