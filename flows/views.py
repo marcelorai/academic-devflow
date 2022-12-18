@@ -32,5 +32,5 @@ def adicionar_etapa_view(request, fluxo_pk):
             etapa = form.save(commit=False)
             etapa.fluxo = fluxo
             etapa.save()
-            return redirect('flows:detalhes', pk=fluxo.id)
+            return redirect('flows:detalhes_fluxo', pk=fluxo.id)
     return render(request, 'flows/etapa/adicionar.html', {'form': form, 'fluxo': fluxo})
