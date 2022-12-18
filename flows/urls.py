@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import pagina_inicial_view, adicionar_fluxo_view, detalhes_fluxo_view, adicionar_etapa_view, editar_etapa_view
+from .views import pagina_inicial_view, adicionar_fluxo_view, detalhes_fluxo_view, adicionar_etapa_view, editar_etapa_view, excluir_etapa_view
 
 app_name = 'flows'
 
@@ -10,4 +10,6 @@ urlpatterns = [
     path('<int:fluxo_pk>/adicionar', adicionar_etapa_view, name='adicionar_etapa'),
     path('<int:fluxo_pk>/editar/<int:pk>',
          editar_etapa_view, name='editar_etapa'),
+    path('<int:fluxo_pk>/excluir/<int:pk>',
+         excluir_etapa_view, name='excluir_etapa'),
 ]
