@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Adicionar fluxo{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row g-2">
+    <div class="col-12">
+      <h2>Adicionar fluxo</h2>
+      <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+          <label for="id_{{ field.html_name }}">{{ field.label }}</label>
+          {{field}}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary mt-2">Salvar</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
