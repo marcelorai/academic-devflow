@@ -14,14 +14,14 @@
         <h4>Etapas</h4>
         <a href="{% url 'flows:adicionar_etapa' fluxo_pk=fluxo.id %}" class="btn btn-primary">Adicionar etapa</a>
       </div>
-      <div class="row g-2">
+      <div class="row row-cols-1 row-cols-md-3 g-2 mt-2">
         {% for etapa in fluxo.etapa_set.all %}
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card">
+        <div class="col">
+          <div class="card h-100">
             <div class="card-body">
-              <h4 class="card-title">{{ etapa.nome }}</h4>
-              <p class="card-text">{{ etapa.descricao }}</p>
-              <p class="card-text">{{ etapa.data_inicio }} - {{ etapa.data_finalizacao }}</p>
+              <h4 class="card-title mb-1">{{ etapa.nome }}</h4>
+              <p class="card-text mb-1">{{ etapa.descricao }}</p>
+              <p class="card-text m-0">{{ etapa.data_inicio | date:"d/m/Y" }} - {{ etapa.data_finalizacao | date:"d/m/Y" }}</p>
               <p class="card-text">
                 {% if etapa.ativa %}
                 <span class="badge badge-success">Ativa</span>
