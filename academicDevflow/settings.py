@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'projects.apps.ProjectsConfig',
     'artifacts.apps.ArtifactsConfig',
+    'flows.apps.FlowsConfig',
     'fontawesomefree'
 ]
 
