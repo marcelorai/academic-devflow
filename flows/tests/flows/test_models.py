@@ -3,6 +3,24 @@ from flows.models import Etapa, Fluxo
 from django.utils import timezone
 
 
+class FluxoModel(TestCase):
+    def setUp(self):
+        self.nome = 'XP'
+        self.descricao = 'Fluxo de desenvolvimento ágil'
+
+    def test_objeto_criado_todos_campos(self):
+        """O modelo cria corretamente o objeto quando todos os atributos são fornecidos"""
+        fluxo = Fluxo.objects.create(nome=self.nome, descricao=self.descricao)
+        self.assertIsInstance(fluxo, Fluxo)
+        self.assertEqual(self.nome, fluxo.nome)
+
+    def test_objeto_criado_campos_obrigatorios(self):
+        """O modelo cria corretamente o objeto quando apenas os atributos obrigatórios são fornecidos"""
+        fluxo = Fluxo.objects.create(nome=self.nome)
+        self.assertIsInstance(fluxo, Fluxo)
+        self.assertEqual(self.nome, fluxo.nome)
+
+
 class EtapaModel(TestCase):
     def setUp(self):
         self.fluxo = Fluxo.objects.create(nome="XP")
