@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
-from pathlib import Path
 import os
+from pathlib import Path
+
+from django.contrib.messages import constants as message_constants
 
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 
@@ -129,3 +130,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# messages framework
+MESSAGE_TAGS = {
+    message_constants.ERROR: 'danger'
+}
