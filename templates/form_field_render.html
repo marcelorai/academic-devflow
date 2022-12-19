@@ -1,0 +1,6 @@
+<div class="form-group mb-2">
+  <label for="id_{{ field.html_name }}">{{ field.label }}</label>
+  {{field}}
+  <small>{{ field.help_text }}</small>
+  {% include 'form_field_errors.html' %}
+</div>

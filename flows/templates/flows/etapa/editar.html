@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Atualizar etapa{% endblock %}
+
+{% block content %}
+<div class="container mx-auto py-2">
+  <div class="row g-2">
+    <div class="col-12">
+      <h2>Atualizar etapa "{{ etapa.nome }}" </h2>
+      {% include 'form_errors.html' %}
+      <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+          {% if field.label == 'Usar gameficação' %}
+          <div class="form-check form-switch">
+            {{field}}
+            <label for="id_{{field.html_name}}" class="form-check-label">{{ field.label }}</label>
+          </div>
+          {% else %}
+            {% include 'form_field_render.html' %}
+          {% endif %}
+        {% endfor %}
+        <button type="submit" class="btn btn-primary mt-2">Salvar</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
