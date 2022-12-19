@@ -7,6 +7,7 @@
   <div class="row g-2">
     <div class="col-12">
       <h2>Adicionar etapa ao fluxo "{{ fluxo.nome }}" </h2>
+      {% include 'form_errors.html' %}
       <form method="post">
         {% csrf_token %}
         {% for field in form %}
@@ -20,6 +21,7 @@
           <label for="id_{{ field.html_name }}">{{ field.label }}</label>
           {{field}}
           <small>{{ field.help_text }}</small>
+          {% include 'form_field_errors.html' %}
         </div>
         {% endif %}
         {% endfor %}
