@@ -2,7 +2,7 @@ from django.test import Client, TestCase
 from django.urls import reverse_lazy
 from django.utils import timezone
 
-from flows.forms import AtualizarEtapaForm, CriarEtapaForm
+from flows.forms import AtualizarEtapaForm
 from flows.models import Etapa, Fluxo
 
 
