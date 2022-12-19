@@ -142,12 +142,12 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Requisitos envolvidos** | RF01, RF03, RF04, RNF01, RNF02, RNF03 |
 | **Prioridade** | Importante |
 | **Estimativa** | 10h |
-| **Tempo gasto (real)** | - |
+| **Tempo gasto (real)** | 14h |
 | **Tamanho funcional** | 7PF (Pontos de função) |
-| **Analista** | Adriel Faria dos Santos |
-| **Desenvolvedor** | - |
-| **Revisor** | - |
-| **Testador** | - |
+| **Analista** | Adriel (responsável por especificar/detalhar o US) |
+| **Desenvolvedor** | Adriel (responsável por implementar e realizar testes de unidade e testes de integração) |
+| **Revisor** | Joan (responsável por avaliar a implementação e executar os testes de unidade e testes de integração) |
+| **Testador** | Adriel (responsável por executar os Testes de Aceitação e fazer o relatório de testes) |
 
 ### US05 - Testes de aceitação (TA)
 
