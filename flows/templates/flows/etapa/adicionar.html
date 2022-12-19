@@ -11,19 +11,14 @@
       <form method="post">
         {% csrf_token %}
         {% for field in form %}
-        {% if field.label == 'Usar gameficação' %}
-        <div class="form-check form-switch">
-          {{field}}
-          <label for="id_{{field.html_name}}" class="form-check-label">{{ field.label }}</label>
-        </div>
-        {% else %}
-        <div class="form-group mb-2">
-          <label for="id_{{ field.html_name }}">{{ field.label }}</label>
-          {{field}}
-          <small>{{ field.help_text }}</small>
-          {% include 'form_field_errors.html' %}
-        </div>
-        {% endif %}
+          {% if field.label == 'Usar gameficação' %}
+          <div class="form-check form-switch">
+            {{field}}
+            <label for="id_{{field.html_name}}" class="form-check-label">{{ field.label }}</label>
+          </div>
+          {% else %}
+            {% include 'form_field_render.html' %}
+          {% endif %}
         {% endfor %}
         <button type="submit" class="btn btn-primary mt-2">Salvar</button>
       </form>
