@@ -1,6 +1,7 @@
 from django import forms
 
 from .models import Etapa, Fluxo
+from django.core.exceptions import ValidationError
 
 
 class CriarFluxoForm(forms.ModelForm):
@@ -34,6 +35,16 @@ class CriarEtapaForm(forms.ModelForm):
         help_texts = {
             'numero': 'Posição da etapa dentro do fluxo'
         }
+
+    def clean(self):
+        cleaned_data = super().clean()
+        data_inicio = cleaned_data.get('data_inicio')
+        data_finalizacao = cleaned_data.get('data_finalizacao')
+
+        if data_inicio and data_finalizacao:
+            if data_inicio > data_finalizacao:
+                mensagem = "A etapa não pode iniciar após sua data de finalização"
+                self.add_error('data_inicio', mensagem)
 
 
 class AtualizarEtapaForm(CriarEtapaForm):
