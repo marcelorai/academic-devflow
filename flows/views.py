@@ -39,12 +39,13 @@ def adicionar_etapa_view(request, fluxo_pk):
 
 def editar_etapa_view(request, fluxo_pk, pk):
     etapa = get_object_or_404(Etapa, id=pk)
+    fluxo = get_object_or_404(Fluxo, id=fluxo_pk)
     form = AtualizarEtapaForm(instance=etapa)
     if request.method == 'POST':
         form = AtualizarEtapaForm(request.POST)
         if form.is_valid():
             nova_etapa = form.save(commit=False)
-            nova_etapa.fluxo = fluxo_pk
+            nova_etapa.fluxo = fluxo
             nova_etapa.id = pk
             nova_etapa.save()
             return redirect('flows:detalhes_fluxo', pk=fluxo_pk)
