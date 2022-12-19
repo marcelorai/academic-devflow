@@ -5,6 +5,7 @@
 {% block content %}
 <div class="container mx-auto">
   <div class="row g-2">
+    <div class="col-12">{% include "messages.html" %}</div>
     <div class="col-12">
       <h2>{{ fluxo.nome }}</h2>
       <p>{{ fluxo.descricao }}</p>
@@ -12,7 +13,11 @@
     <div class="col-12">
       <div class="d-flex justify-content-between align-items-center">
         <h4>Etapas</h4>
-        <a href="{% url 'flows:adicionar_etapa' fluxo_pk=fluxo.id %}" class="btn btn-primary">Adicionar etapa</a>
+        <a
+          href="{% url 'flows:adicionar_etapa' fluxo_pk=fluxo.id %}"
+          class="btn btn-primary">
+          Adicionar etapa
+        </a>
       </div>
       <div class="row row-cols-1 row-cols-md-3 g-2 mt-2">
         {% for etapa in fluxo.etapa_set.all %}
@@ -21,19 +26,29 @@
             <div class="card-body">
               <h4 class="card-title mb-1">{{ etapa.nome }}</h4>
               <p class="card-text mb-1">{{ etapa.descricao }}</p>
-              <p class="card-text m-0">{{ etapa.data_inicio | date:"d/m/Y" }} - {{ etapa.data_finalizacao | date:"d/m/Y" }}</p>
+              <p class="card-text m-0">
+                {{ etapa.data_inicio | date:"d/m/Y" }} -
+                {{ etapa.data_finalizacao | date:"d/m/Y" }}
+              </p>
               <p class="card-text">
                 {% if etapa.ativa %}
                 <span class="badge badge-success">Ativa</span>
-                {% endif %}
-                {% if etapa.gameficada %}
+                {% endif %} {% if etapa.gameficada %}
                 <span class="badge badge-primary">Gameficada</span>
                 {% endif %}
               </p>
             </div>
             <div class="card-footer">
-              <a href="{% url 'flows:editar_etapa' fluxo_pk=fluxo.id pk=etapa.id %}" class="btn btn-primary">Editar</a>
-              <a href="{% url 'flows:excluir_etapa' fluxo_pk=fluxo.id pk=etapa.id %}" class="btn btn-danger">Excluir</a>
+              <a
+                href="{% url 'flows:editar_etapa' fluxo_pk=fluxo.id pk=etapa.id %}"
+                class="btn btn-primary">
+                Editar
+              </a>
+              <a
+                href="{% url 'flows:excluir_etapa' fluxo_pk=fluxo.id pk=etapa.id %}"
+                class="btn btn-danger">
+                Excluir
+              </a>
             </div>
           </div>
         </div>
