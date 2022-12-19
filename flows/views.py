@@ -1,4 +1,6 @@
+from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect, render
+from django.utils import timezone
 
 from .forms import AtualizarEtapaForm, CriarEtapaForm, CriarFluxoForm
 from .models import Etapa, Fluxo
@@ -56,6 +58,10 @@ def excluir_etapa_view(request, fluxo_pk, pk):
     get_object_or_404(Fluxo, id=fluxo_pk)
     etapa = get_object_or_404(Etapa, id=pk)
     if request.method == 'POST':
+        if etapa.data_inicio <= timezone.now().date():
+            messages.error(
+                request, 'Não é possível excluir uma etapa que já iniciou')
+            return redirect('flows:detalhes_fluxo', pk=fluxo_pk)
         etapa.delete()
         return redirect('flows:detalhes_fluxo', pk=fluxo_pk)
     return render(request, 'flows/etapa/excluir.html', {'etapa': etapa})
