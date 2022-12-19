@@ -53,6 +53,7 @@ def editar_etapa_view(request, fluxo_pk, pk):
 
 
 def excluir_etapa_view(request, fluxo_pk, pk):
+    get_object_or_404(Fluxo, id=fluxo_pk)
     etapa = get_object_or_404(Etapa, id=pk)
     if request.method == 'POST':
         etapa.delete()
