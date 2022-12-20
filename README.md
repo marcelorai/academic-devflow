@@ -9,3 +9,5 @@ Academic Dev Flow - Gestor de Fluxo de Desenvolvimento de Projeto Acadêmico Gam
 - [Plano de Iteração e Release](https://github.com/labens-ufrn/academic-devflow/blob/master/docs/doc-iteracao.md)
 - [Plano de Testes](https://github.com/labens-ufrn/academic-devflow/blob/master/docs/plano-testes.md)
 - [Manual de execução](docs/manual-execucao.md)
+- [Documento de User Stories](https://github.com/marcelorai/academic-devflow/blob/master/docs/doc-userstories.md)
+- [Relatório de Testes](https://github.com/marcelorai/academic-devflow/blob/master/docs/doc-relatorio-testes.md)
